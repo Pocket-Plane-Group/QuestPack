@@ -110,17 +110,20 @@ IF
   AreaCheck("ar6300")
   !Name("amtgen01",Myself)
   GlobalGT("TethyrBattleStart","GLOBAL",1)
-  Allegiance(Myself,ENEMY)
+  !Global("d0armyDialog","LOCALS",1)
 THEN
   RESPONSE #100
+    SetGlobal("d0armyDialog","LOCALS",1)
     ChangeEnemyAlly(Myself,NEUTRAL)
     SetDialog("d0army")
     FaceObject("amtgen01")
   RESPONSE #100
+    SetGlobal("d0armyDialog","LOCALS",1)
     ChangeEnemyAlly(Myself,NEUTRAL)
     SetDialog("d0army")
     FaceObject(Player1)
   RESPONSE #100
+    SetGlobal("d0armyDialog","LOCALS",1)
     ChangeEnemyAlly(Myself,NEUTRAL)
     SetDialog("d0army")
     FaceObject(NearestMyGroupOfType)
