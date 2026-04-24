@@ -1,5 +1,5 @@
-BACKUP ~d0questpack/backup~
-AUTHOR ~SimDing0 (http://forums.pocketplane.net/index.php/board,21.0.html)~
+BACKUP ~weidu_external/d0questpack/backup~
+SUPPORT ~http://forums.pocketplane.net/index.php/board,21.0.html~
 
 VERSION ~v3.5~
 README ~d0questpack/readme_%LANGUAGE%.html~ ~d0questpack/readme.html~
@@ -70,58 +70,66 @@ ALLOW_MISSING ~jahei14.cre~
 //////////////////////////////////////////////////////////////////////
 
 ALWAYS
-  ACTION_IF GAME_IS ~eet~ BEGIN
-    OUTER_SET bg2_chapter = 12
-  END ELSE BEGIN
-    OUTER_SET bg2_chapter = 0
-  END
-  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
-    OUTER_SET bg2_chapter = bg2_chapter + 1
-    OUTER_SPRINT name_source ~bg2_chapter_%i%~
-    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-  END
 
-  UNINSTALL setup-d0quest.tp2 0
-  UNINSTALL setup-d0quest.tp2 1
-  UNINSTALL setup-d0quest.tp2 2
-  UNINSTALL setup-d0quest.tp2 3
-  UNINSTALL setup-d0quest.tp2 4
+  ACTION_IF !VARIABLE_IS_SET d0questpack_always THEN BEGIN // check to make this happen only once per install
 
-  // UNINSTALL Setup-GbG.tp2 1
+    OUTER_SET d0questpack_always = 1 // don't repeat this block
+    OUTER_SET bg2_chapter = 0 // overridden for eet installs only
+    OUTER_SPRINT tra_path ~d0questpack/translations~ // overridden for ee installs
 
-  INCLUDE ~d0questpack/tp2/lib.tpa~
+    UNINSTALL setup-d0quest.tp2 0
+    UNINSTALL setup-d0quest.tp2 1
+    UNINSTALL setup-d0quest.tp2 2
+    UNINSTALL setup-d0quest.tp2 3
+    UNINSTALL setup-d0quest.tp2 4
 
-  OUTER_SPRINT tra_path ~d0questpack/translations~
+    // UNINSTALL Setup-GbG.tp2 1
 
-  /* QP has a few strings which differ between regular and EE BG2 */
-  ACTION_IF ENGINE_IS ~bg2ee~ BEGIN
-    LOAD_TRA ~%tra_path%/ee/english/d0quest.tra~
-    ACTION_IF ~%LANGUAGE%~ STRING_COMPARE_CASE "english" AND
-              FILE_EXISTS ~%tra_path%/ee/%LANGUAGE%/d0quest.tra~
-    BEGIN
-      LOAD_TRA ~%tra_path%/ee/%LANGUAGE%/d0quest.tra~
+    INCLUDE ~d0questpack/tp2/lib.tpa~
+
+    ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
+    
+      ACTION_IF GAME_IS ~eet~ BEGIN
+        OUTER_SET bg2_chapter = 12
+      END
+    
+      OUTER_SPRINT tra_path ~weidu_external/d0questpack/translations~
+
+      ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup setup-unix setup-osx setup-win32 END
+      ACTION_DEFINE_ARRAY fl#reload BEGIN d0quest END
+
+      LAF HANDLE_CHARSETS
+        INT_VAR
+          infer_charsets = 1
+        STR_VAR
+          tra_path = ~d0questpack/translations~
+          out_path = ~weidu_external/d0questpack/translations~
+          noconvert_array = fl#noconvert
+          reload_array = fl#reload
+          default_language = english
+      END
+    
+      ACTION_IF FILE_EXISTS ~d0questpack/translations/ee/%LANGUAGE%/d0quest.tra~ BEGIN // needs to go after, otherwise discarded by H_C reloading
+        LOAD_TRA ~d0questpack/translations/ee/%LANGUAGE%/d0quest.tra~
+      END
+      
+    END // ee check
+    
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
     END
-  END
 
-  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup setup-unix setup-osx setup-win32 END
-  ACTION_DEFINE_ARRAY fl#reload BEGIN d0quest END
-
-  LAF HANDLE_CHARSETS
-    INT_VAR
-      infer_charsets = 1
-    STR_VAR
-      tra_path = EVAL ~%MOD_FOLDER%/translations~
-      noconvert_array = fl#noconvert
-      reload_array = fl#reload
-      default_language = english
-  END
-
-  // We only perform this patch once per install.
-  ACTION_IF !FILE_EXISTS_IN_GAME fl#qp_standardpatch.mrk BEGIN
-    INCLUDE ~d0questpack/tp2/standardpatch.tph~
-    COPY_EXISTING sw1h01.itm "override/fl#qp_standardpatch.mrk"
-  END
-END
+    // We only perform this patch once per install.
+    ACTION_IF !FILE_EXISTS_IN_GAME fl#qp_standardpatch.mrk BEGIN
+      INCLUDE ~d0questpack/tp2/standardpatch.tph~
+      COPY_EXISTING sw1h01.itm "override/fl#qp_standardpatch.mrk"
+    END
+    
+  END // var check
+  
+END // always
 
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
