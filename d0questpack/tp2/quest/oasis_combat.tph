@@ -1,29 +1,29 @@
-COPY ~questpack/oasis/combat/creatures/amtarc01.cre~ ~override~
-     ~questpack/oasis/combat/creatures/amtcap01.cre~ ~override~
-     ~questpack/oasis/combat/creatures/amtcle01.cre~ ~override~
-     ~questpack/oasis/combat/creatures/amtgen01.cre~ ~override~
-     ~questpack/oasis/combat/creatures/amtmag01.cre~ ~override~
-     ~questpack/oasis/combat/creatures/amtpik01.cre~ ~override~
+COPY ~d0questpack/oasis/combat/creatures/amtarc01.cre~ ~override~
+     ~d0questpack/oasis/combat/creatures/amtcap01.cre~ ~override~
+     ~d0questpack/oasis/combat/creatures/amtcle01.cre~ ~override~
+     ~d0questpack/oasis/combat/creatures/amtgen01.cre~ ~override~
+     ~d0questpack/oasis/combat/creatures/amtmag01.cre~ ~override~
+     ~d0questpack/oasis/combat/creatures/amtpik01.cre~ ~override~
 
-COPY ~questpack/oasis/combat/d0shield.cre~ ~override~
+COPY ~d0questpack/oasis/combat/d0shield.cre~ ~override~
   SAY NAME1 @199
   SAY NAME2 @199
 
-COPY ~questpack/oasis/combat/spells/d0oasma1.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oasma2.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oassp1.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oassp2.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oassp3.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oassp4.spl~ ~override~
-     ~questpack/oasis/combat/spells/d0oassp5.spl~ ~override~
+COPY ~d0questpack/oasis/combat/spells/d0oasma1.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oasma2.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oassp1.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oassp2.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oassp3.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oassp4.spl~ ~override~
+     ~d0questpack/oasis/combat/spells/d0oassp5.spl~ ~override~
 
-COPY ~questpack/oasis/combat/spells/d0bastio.spl~ ~override~
+COPY ~d0questpack/oasis/combat/spells/d0bastio.spl~ ~override~
   SAY 0x8 @200
 
-COPY ~questpack/oasis/combat/spells/d0bash.spl~ ~override~
+COPY ~d0questpack/oasis/combat/spells/d0bash.spl~ ~override~
   SAY 0x8 @201
 
-COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amthea.baf~
-COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amtmag.baf~
-COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amtmer.baf~
-EXTEND_TOP ~ar6300.bcs~ ~questpack/oasis/combat/scripts/ar6300.baf~ EVALUATE_BUFFER
+COMPILE EVALUATE_BUFFER ~d0questpack/oasis/combat/scripts/d0amthea.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/oasis/combat/scripts/d0amtmag.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/oasis/combat/scripts/d0amtmer.baf~
+EXTEND_TOP ~ar6300.bcs~ ~d0questpack/oasis/combat/scripts/ar6300.baf~ EVALUATE_BUFFER

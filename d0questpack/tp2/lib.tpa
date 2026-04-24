@@ -5,8 +5,8 @@ BEGIN
   LAF HANDLE_AUDIO
     STR_VAR
       audio_path
-      oggdec_path = ~questpack/bin~
-      sox_path = ~questpack/bin~
+      oggdec_path = ~d0questpack/bin~
+      sox_path = ~d0questpack/bin~
   END
 END
 
@@ -17,7 +17,7 @@ BEGIN
   LAF HANDLE_TILESETS
     STR_VAR
       tiz_path
-      tisunpack_path = ~questpack/bin~
+      tisunpack_path = ~d0questpack/bin~
   END
 END
 

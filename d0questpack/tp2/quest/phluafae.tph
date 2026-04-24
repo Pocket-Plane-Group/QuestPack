@@ -1,18 +1,18 @@
-COPY ~questpack/phluafae/suinvis.cre~ ~override~
-COPY ~questpack/phluafae/sumound.cre~ ~override~
+COPY ~d0questpack/phluafae/suinvis.cre~ ~override~
+COPY ~d0questpack/phluafae/sumound.cre~ ~override~
 
-COPY ~questpack/phluafae/sudryad.cre~ ~override~
+COPY ~d0questpack/phluafae/sudryad.cre~ ~override~
   SAY NAME1 @135
   SAY NAME2 @135
   WRITE_ASCII 0x34 "" #8
 
-COPY ~questpack/phluafae/sufake.itm~ ~override~
+COPY ~d0questpack/phluafae/sufake.itm~ ~override~
   SAY NAME1 @138
   SAY NAME2 @138
   SAY IDENTIFIED_DESC @139
   SAY UNIDENTIFIED_DESC @139
 
-COPY ~questpack/phluafae/sutear.itm~ ~override~
+COPY ~d0questpack/phluafae/sutear.itm~ ~override~
   SAY NAME1 @140
   SAY NAME2 @141
   SAY UNIDENTIFIED_DESC @142
@@ -41,8 +41,8 @@ COPY ~questpack/phluafae/sutear.itm~ ~override~
       resource = spnwchrm
   END
 
-COPY ~questpack/phluafae/sutear.bam~ ~override~
-     ~questpack/phluafae/sufake.bam~ ~override~
+COPY ~d0questpack/phluafae/sutear.bam~ ~override~
+     ~d0questpack/phluafae/sufake.bam~ ~override~
 
 COPY_EXISTING spin770.spl ~override/fl#qpchk.spl~
   PATCH_FOR_EACH opcode_to_delete IN 215 174 BEGIN
@@ -52,20 +52,20 @@ COPY_EXISTING spin770.spl ~override/fl#qpchk.spl~
     END
   END
 
-EXTEND_TOP ~AR1300.bcs~ ~questpack/phluafae/appendAR1300.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR1304.bcs~ ~questpack/phluafae/appendAR1300.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR1200.bcs~ ~questpack/phluafae/appendAR1200.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~baldur.bcs~ ~questpack/phluafae/baldurappend.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~VAELASA.bcs~ ~questpack/phluafae/appendvae.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR1300.bcs~ ~d0questpack/phluafae/appendAR1300.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR1304.bcs~ ~d0questpack/phluafae/appendAR1300.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR1200.bcs~ ~d0questpack/phluafae/appendAR1200.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~baldur.bcs~ ~d0questpack/phluafae/baldurappend.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~VAELASA.bcs~ ~d0questpack/phluafae/appendvae.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/phluafae/SUFAKEA.baf~
-        ~questpack/phluafae/SUFAKEB.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/phluafae/SUFAKEA.baf~
+        ~d0questpack/phluafae/SUFAKEB.baf~
 
-COMPILE EVALUATE_BUFFER ~questpack/phluafae/SUINVIS.baf~
-        ~questpack/phluafae/SUMOUND.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/phluafae/SUINVIS.baf~
+        ~d0questpack/phluafae/SUMOUND.baf~
 
 ACTION_IF !FILE_EXISTS_IN_GAME j#klsyj.dlg BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/phluafae/dialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/phluafae/dialog.d~ USING
           ~%tra_path%/english/phluafae.tra~
           ~%tra_path%/%LANGUAGE%/phluafae.tra~
 END
@@ -74,8 +74,8 @@ END
  * Need to be compiled together due to label references
  */
 ACTION_IF FILE_EXISTS_IN_GAME j#klsyj.dlg BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/phluafae/dialog.d~
-          ~questpack/phluafae/kelsey.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/phluafae/dialog.d~
+          ~d0questpack/phluafae/kelsey.d~ USING
           ~%tra_path%/english/phluafae.tra~
           ~%tra_path%/%LANGUAGE%/phluafae.tra~
 END
@@ -84,4 +84,4 @@ ADD_JOURNAL EXISTING TITLE (#74415) @137 @138 @139 @140 @141 @142 USING
             ~%tra_path%/english/phluafae.tra~
             ~%tra_path%/%LANGUAGE%/phluafae.tra~
 
-COMPILE EVALUATE_BUFFER ~questpack/phluafae/SUDRYAD.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/phluafae/SUDRYAD.baf~

@@ -1,4 +1,4 @@
-COMPILE EVALUATE_BUFFER ~questpack/reynald/dialog.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/reynald/dialog.d~ USING
         ~%tra_path%/english/paladins.tra~
         ~%tra_path%/%LANGUAGE%/paladins.tra~
 
@@ -6,17 +6,17 @@ ADD_JOURNAL @173 @174 @175 USING
             ~%tra_path%/english/paladins.tra~
             ~%tra_path%/%LANGUAGE%/paladins.tra~
 
-COMPILE EVALUATE_BUFFER ~questpack/reynald/d0kaypal.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/reynald/d0kaypal.baf~
 
-COPY ~questpack/reynald/d0kaypal.cre~ ~override~
+COPY ~d0questpack/reynald/d0kaypal.cre~ ~override~
 
-EXTEND_TOP ~ar0500.bcs~ ~questpack/reynald/ar0500.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0800.bcs~ ~questpack/reynald/ar0800.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0808.bcs~ ~questpack/reynald/ar0808.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0809.bcs~ ~questpack/reynald/ar0809.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0500.bcs~ ~d0questpack/reynald/ar0500.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0800.bcs~ ~d0questpack/reynald/ar0800.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0808.bcs~ ~d0questpack/reynald/ar0808.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0809.bcs~ ~d0questpack/reynald/ar0809.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~c6eric.bcs~ ~questpack/reynald/c6eric.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~kaysmg01.bcs~ ~questpack/reynald/et_smug.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~c6eric.bcs~ ~d0questpack/reynald/c6eric.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~kaysmg01.bcs~ ~d0questpack/reynald/et_smug.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0808.are~ ~override~
   GET_OFFSET_ARRAY paladins#triggers 0x5c 4 0x5a 2 0 0 0xc4
@@ -29,7 +29,7 @@ COPY_EXISTING ~ar0808.are~ ~override~
 BUT_ONLY
 
 // FALLEN PC
-// EXTEND_TOP ~baldur.bcs~ ~questpack/reynald/et_spawn.baf~
+// EXTEND_TOP ~baldur.bcs~ ~d0questpack/reynald/et_spawn.baf~
 
 COPY_EXISTING ~kaypal03.cre~ ~override/d0palmsg.cre~
   WRITE_ASCII 0x248 "SHOUTDLG" #8
@@ -52,6 +52,6 @@ COPY_EXISTING ~kayl2.cre~ ~override~
   WRITE_ASCII 0x260 "D0KAYL" #8
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~questpack/reynald/d0kayl.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/reynald/d0kayl.baf~
 
-EXTEND_TOP ~kaypal01.bcs~ ~questpack/reynald/anarg.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~kaypal01.bcs~ ~d0questpack/reynald/anarg.baf~ EVALUATE_BUFFER

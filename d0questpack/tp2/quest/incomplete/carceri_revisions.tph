@@ -1,7 +1,7 @@
-OUTER_SPRINT "datapath" "questpack/carceri/revisions"
+OUTER_SPRINT "datapath" "d0questpack/carceri/revisions"
 
 COPY ~%datapath%/copy~ ~override~
-COMPILE EVALUATE_BUFFER ~questpack/carceri/revisions/compile~
+COMPILE EVALUATE_BUFFER ~d0questpack/carceri/revisions/compile~
 
 COPY + ~%datapath%/creatures.lst~ ~%datapath%/creatures.lst~
 	COUNT_2DA_ROWS 3 "rows"

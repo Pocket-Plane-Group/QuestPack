@@ -1,16 +1,16 @@
-COMPILE EVALUATE_BUFFER ~questpack/oasis/amtgen01.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/oasis/amtgen01.d~
 USING   ~%tra_path%/english/oasis.tra~
         ~%tra_path%/%LANGUAGE%/oasis.tra~
 
-COMPILE EVALUATE_BUFFER ~questpack/oasis/d0hosti.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/oasis/d0hosti.baf~
 
 COPY_EXISTING ~AR6300.ARE~ ~override~
   REPLACE_TEXTUALLY ~HOSTILE~ ~D0HOSTI~ (8)
 
-COPY ~questpack/oasis/d0amtgen.wav~ ~override~
-     ~questpack/oasis/d0oasis9.spl~ ~override~
+COPY ~d0questpack/oasis/d0amtgen.wav~ ~override~
+     ~d0questpack/oasis/d0oasis9.spl~ ~override~
 
-EXTEND_TOP ~baldur25.bcs~ ~questpack/oasis/et_baldr25.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~baldur25.bcs~ ~d0questpack/oasis/et_baldr25.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~amtgen01.cre~ ~override~
   SAY 0x10c #61865

@@ -5,26 +5,26 @@ STRING_SET 49766 @295
 STRING_SET 49767 @296
 
 // Basic scripts
-COMPILE EVALUATE_BUFFER ~questpack/AI/compile~
+COMPILE EVALUATE_BUFFER ~d0questpack/AI/compile~
 
 // If Drow Innates are already installed
 ACTION_IF FILE_EXISTS_IN_GAME KRIN400.SPL BEGIN
-  EXTEND_TOP ~WTASIGHT.BCS~ ~questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WTARSGT.BCS~ ~questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WDASIGHT.BCS~ ~questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WDARSGT.BCS~ ~questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WTASIGHT.BCS~ ~d0questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WTARSGT.BCS~ ~d0questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WDASIGHT.BCS~ ~d0questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WDARSGT.BCS~ ~d0questpack/AI/ET_WTA.BAF~ EVALUATE_BUFFER
 END
 
 // If Spider Web is already installed
 ACTION_IF FILE_EXISTS_IN_GAME d0spiweb.spl BEGIN
-  EXTEND_TOP ~WTASIGHT.BCS~ ~questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WTARSGT.BCS~ ~questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WDASIGHT.BCS~ ~questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
-  EXTEND_TOP ~WDARSGT.BCS~ ~questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WTASIGHT.BCS~ ~d0questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WTARSGT.BCS~ ~d0questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WDASIGHT.BCS~ ~d0questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
+  EXTEND_TOP ~WDARSGT.BCS~ ~d0questpack/AI/ET_WTA2.BAF~ EVALUATE_BUFFER
 END
 
 // Druid AI
-COMPILE EVALUATE_BUFFER ~questpack/AI/druid10a.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/AI/druid10a.baf~
 COPY_EXISTING ~druid10a.bcs~ ~override/druid10b.bcs~
               ~druid10a.bcs~ ~override/druid12a.bcs~
               ~druid10a.bcs~ ~override/druid12b.bcs~
@@ -34,11 +34,11 @@ COPY_EXISTING ~druid10a.bcs~ ~override/druid10b.bcs~
               ~druid10a.bcs~ ~override/druid8b.bcs~
 
 // Paladin AI
-COMPILE EVALUATE_BUFFER ~questpack/AI/palad10.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/AI/palad10.baf~
 COPY_EXISTING ~palad10.bcs~ ~override/palad16.bcs~
 
 // Mage AI
-/* COMPILE ~questpack/AI/magehigh.baf~
+/* COMPILE ~d0questpack/AI/magehigh.baf~
 COPY ~override/magehigh.bcs~ ~override/mage1.bcs~
      ~override/magehigh.bcs~ ~override/mage10a.bcs~
      ~override/magehigh.bcs~ ~override/mage10b.bcs~

@@ -55,7 +55,7 @@ WRITE_BYTE 0x23e 18 // Charisma
   WRITE_SHORT ("%effects_offset%" + 36) 100 // Probability
   WRITE_ASCII ("%effects_offset%" + 40) "d09d960" // 9d9+60
 // Create the spell file required
-COPY ~questpack/sahuagin/basehp.spl~ ~override/d09d960.spl~ // 9d9+60
+COPY ~d0questpack/sahuagin/basehp.spl~ ~override/d09d960.spl~ // 9d9+60
   WRITE_LONG 0xb6 9 // # dice
   WRITE_LONG 0xba 9 // # die size
   WRITE_LONG 0xce 60 // bonus

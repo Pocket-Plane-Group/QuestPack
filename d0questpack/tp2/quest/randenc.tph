@@ -1,6 +1,6 @@
-COPY ~questpack/encounters/ding0/randenc/d0ogrema.cre~ ~override~
-     ~questpack/encounters/ding0/randenc/d0bohun1.cre~ ~override~
-     ~questpack/encounters/ding0/randenc/d0bohun2.cre~ ~override~
+COPY ~d0questpack/encounters/ding0/randenc/d0ogrema.cre~ ~override~
+     ~d0questpack/encounters/ding0/randenc/d0bohun1.cre~ ~override~
+     ~d0questpack/encounters/ding0/randenc/d0bohun2.cre~ ~override~
 
 COPY_EXISTING ~ORC01.CRE~ ~override/d0qpsy01.cre~
               ~ORC02.CRE~ ~override/d0qpsy02.cre~
@@ -15,24 +15,24 @@ COPY_EXISTING ~ORC01.CRE~ ~override/d0qpsy01.cre~
   SAY NAME1 @304 // Sythillisian Soldier
   SAY NAME2 @304 // Sythillisian Soldier
 
-EXTEND_BOTTOM ~ar0041.bcs~ ~questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ar0045.bcs~ ~questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ar0046.bcs~ ~questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0041.bcs~ ~d0questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0045.bcs~ ~d0questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0046.bcs~ ~d0questpack/encounters/ding0/randenc/city_old.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0041.bcs~ ~override~
               ~ar0045.bcs~ ~override~
               ~ar0046.bcs~ ~override~
-  REPLACE_BCS_BLOCK EVALUATE_BUFFER ~questpack/encounters/ding0/randenc/city_old.baf~
-                    ~questpack/encounters/ding0/randenc/city_new.baf~
+  REPLACE_BCS_BLOCK EVALUATE_BUFFER ~d0questpack/encounters/ding0/randenc/city_old.baf~
+                    ~d0questpack/encounters/ding0/randenc/city_new.baf~
 BUT_ONLY
 
-EXTEND_BOTTOM ~ar0042.bcs~ ~questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ar0043.bcs~ ~questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ar0044.bcs~ ~questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0042.bcs~ ~d0questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0043.bcs~ ~d0questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0044.bcs~ ~d0questpack/encounters/ding0/randenc/wilderness_old.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0042.bcs~ ~override~
               ~ar0043.bcs~ ~override~
               ~ar0044.bcs~ ~override~
-  REPLACE_BCS_BLOCK EVALUATE_BUFFER ~questpack/encounters/ding0/randenc/wilderness_old.baf~
-                    ~questpack/encounters/ding0/randenc/wilderness_new.baf~
+  REPLACE_BCS_BLOCK EVALUATE_BUFFER ~d0questpack/encounters/ding0/randenc/wilderness_old.baf~
+                    ~d0questpack/encounters/ding0/randenc/wilderness_new.baf~
 BUT_ONLY

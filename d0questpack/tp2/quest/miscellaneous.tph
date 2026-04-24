@@ -2,40 +2,40 @@
 /////////////////////// BONS IRON MODDER - KISS //////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/bons/sukiss1.cre~ ~override~
+COPY ~d0questpack/encounters/bons/sukiss1.cre~ ~override~
   SAY NAME1 @123 // Dahlia
   SAY NAME2 @123 // Dahlia
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/bons/BonsKiss.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/bons/BonsKiss.d~ USING
         ~%tra_path%/english/bonskiss.tra~
         ~%tra_path%/%LANGUAGE%/bonskiss.tra~
 
-COPY ~questpack/encounters/bons/SUKISSK.wav~ ~override~
+COPY ~d0questpack/encounters/bons/SUKISSK.wav~ ~override~
 
-EXTEND_TOP ~AR0800.bcs~ ~questpack/encounters/bons/appendAR0800.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0800.bcs~ ~d0questpack/encounters/bons/appendAR0800.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/bons/SUKISSC1.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/bons/SUKISSC1.baf~
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// BONS IRON MODDER - REGRETS ///////////////////
 //////////////////////////////////////////////////////////////////////
 
 ACTION_IF GAME_IS ~tob bgt bg2ee eet~ BEGIN
-  COPY ~questpack/encounters/bons2/sumist.cre~ ~override~
+  COPY ~d0questpack/encounters/bons2/sumist.cre~ ~override~
     SAY NAME1 @275 // Spectre
     SAY NAME2 @275 // Spectre
 
-  COPY ~questpack/encounters/bons2/suspyim.cre~ ~override~
+  COPY ~d0questpack/encounters/bons2/suspyim.cre~ ~override~
 
   COPY_EXISTING ~spwi914.spl~ ~override/d0wi914.spl~
     SAY NAME1 @276 // Retribution of Regrets
     SAY NAME2 @276 // Retribution of Regrets
 
-  EXTEND_TOP ~AR5006.bcs~ ~questpack/encounters/bons2/appendAR5006.baf~ EVALUATE_BUFFER
+  EXTEND_TOP ~AR5006.bcs~ ~d0questpack/encounters/bons2/appendAR5006.baf~ EVALUATE_BUFFER
 
-  COMPILE EVALUATE_BUFFER ~questpack/encounters/bons2/sumist.d~
-          ~questpack/encounters/bons2/SUMIST.baf~
-          ~questpack/encounters/bons2/SUSPYIM.baf~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/encounters/bons2/sumist.d~
+          ~d0questpack/encounters/bons2/SUMIST.baf~
+          ~d0questpack/encounters/bons2/SUSPYIM.baf~ USING
           ~%tra_path%/english/sumist.tra~
           ~%tra_path%/%LANGUAGE%/sumist.tra~
 
@@ -48,41 +48,41 @@ END
 /////////////////////// BLUE IRON MODDER - INDIGO ////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/blue/d0indigo.cre~ ~override~
+COPY ~d0questpack/encounters/blue/d0indigo.cre~ ~override~
   SAY NAME1 @133 // Indigo
   SAY NAME2 @133 // Indigo
 
 ACTION_IF FILE_EXISTS_IN_GAME ~FWKETO.DLG~ THEN BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/encounters/blue/lmindi.d~
-          ~questpack/encounters/blue/keto.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/encounters/blue/lmindi.d~
+          ~d0questpack/encounters/blue/keto.d~ USING
           ~%tra_path%/english/indigo.tra~
           ~%tra_path%/%LANGUAGE%/indigo.tra~
 END ELSE BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/encounters/blue/lmindi.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/encounters/blue/lmindi.d~ USING
           ~%tra_path%/english/indigo.tra~
           ~%tra_path%/%LANGUAGE%/indigo.tra~
 END
 
-EXTEND_TOP ~ar1105.bcs~ ~questpack/encounters/blue/spawn.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar1105.bcs~ ~d0questpack/encounters/blue/spawn.baf~ EVALUATE_BUFFER
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// DISPLACER BEASTS /////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/ding0/displacer/JY_01DB.ITM~ ~override~
-     ~questpack/encounters/ding0/displacer/JY_02DB.ITM~ ~override~
-     ~questpack/encounters/ding0/displacer/JY_03DB.ITM~ ~override~
+COPY ~d0questpack/encounters/ding0/displacer/JY_01DB.ITM~ ~override~
+     ~d0questpack/encounters/ding0/displacer/JY_02DB.ITM~ ~override~
+     ~d0questpack/encounters/ding0/displacer/JY_03DB.ITM~ ~override~
   SAY NAME1 #-1
   SAY NAME2 #-1
   SAY UNIDENTIFIED_DESC #-1
   SAY IDENTIFIED_DESC #-1
 
-COPY ~questpack/encounters/ding0/displacer/JY_00DB.CRE~ ~override~
+COPY ~d0questpack/encounters/ding0/displacer/JY_00DB.CRE~ ~override~
   SAY NAME1 @278 // Greater Displacer Beast
   SAY NAME2 @278 // Greater Displacer Beast
   WRITE_ASCII 0x34 "" #16
 
-COPY ~questpack/encounters/ding0/displacer/JY_00DB1.CRE~ ~override~
+COPY ~d0questpack/encounters/ding0/displacer/JY_00DB1.CRE~ ~override~
   SAY NAME1 @277 // Displacer Beast
   SAY NAME2 @277 // Displacer Beast
   WRITE_ASCII 0x34 "" #16
@@ -159,9 +159,9 @@ COPY_EXISTING ~ribald.cre~ ~override~
 /////////////////////// BATTLE HORRORS ///////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/ding0/d0batho~ ~override~
+COPY ~d0questpack/encounters/ding0/d0batho~ ~override~
 
-EXTEND_BOTTOM ~ar1514.bcs~ ~questpack/encounters/ding0/et_1514.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar1514.bcs~ ~d0questpack/encounters/ding0/et_1514.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0330.are~ ~override~
   REPLACE_TEXTUALLY "ICMIN01" "D0BATHO" (8)
@@ -179,14 +179,14 @@ COPY_EXISTING ~shop05.sto~ ~override~
 /////////////////////// FRIENDLY DOCKS DOG ///////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/ding0/d0fundog.cre~ ~override~
+COPY ~d0questpack/encounters/ding0/d0fundog.cre~ ~override~
   WRITE_ASCII 0x280 "d0fundog" #32
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/d0fundog.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/d0fundog.baf~
 
-EXTEND_TOP ~ar0300.bcs~ ~questpack/encounters/ding0/et_0300.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0300.bcs~ ~d0questpack/encounters/ding0/et_0300.baf~ EVALUATE_BUFFER
 
-COPY ~questpack/encounters/ding0/dogfix~ ~override~
+COPY ~d0questpack/encounters/ding0/dogfix~ ~override~
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// DOCK ORPHAN //////////////////////////////////
@@ -213,26 +213,26 @@ BUT_ONLY
 COPY_EXISTING ~dlost.cre~ ~override~
   WRITE_ASCII 0x250 "DLOST" #8
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/dlost.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/dlost.baf~
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// COWLED ARREST CUTSCENE ///////////////////////
 //////////////////////////////////////////////////////////////////////
 
 /*
-COPY ~questpack/encounters/ding0/d0qpcow1.cre~ ~override~
+COPY ~d0questpack/encounters/ding0/d0qpcow1.cre~ ~override~
   WRITE_ASCII 0x280 "d0qpcow1" #32
   WRITE_ASCII 0x2cc "d0qpcow1" #8
   WRITE_ASCII 0x248 "d0cowsht" #8
 
-COPY ~questpack/encounters/ding0/d0qpcow1.cre~ ~override/d0qpcow2.cre~
+COPY ~d0questpack/encounters/ding0/d0qpcow1.cre~ ~override/d0qpcow2.cre~
   SAY NAME1 @136
   SAY NAME2 @136
   WRITE_ASCII 0x280 "d0qpcow2" #32
   WRITE_ASCII 0x2cc "d0qpcow2" #8
   WRITE_ASCII 0x248 "d0cowsht" #8
 
-COPY ~questpack/encounters/ding0/d0qpcow1.cre~ ~override/d0qpcow3.cre~
+COPY ~d0questpack/encounters/ding0/d0qpcow1.cre~ ~override/d0qpcow3.cre~
   SAY NAME1 #3139
   SAY NAME2 #3139
   WRITE_SHORT 0x28 25088
@@ -242,16 +242,16 @@ COPY ~questpack/encounters/ding0/d0qpcow1.cre~ ~override/d0qpcow3.cre~
   WRITE_BYTE 0x2e 47
   WRITE_ASCII 0x248 "d0cowsht" #8
 
-EXTEND_TOP ~ar0500.bcs~ ~questpack/encounters/ding0/et_0500.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0500.bcs~ ~d0questpack/encounters/ding0/et_0500.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/d0cowsht.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/d0cowsht.baf~
 */
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// MADULF FIGHTS WITH PALADINS //////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP ~ar1100.bcs~ ~questpack/encounters/ding0/et_1100.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar1100.bcs~ ~d0questpack/encounters/ding0/et_1100.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~uhogre01.cre~ ~override~
   WRITE_ASCII 0x268 "WTASIGHT" #8
@@ -288,8 +288,8 @@ COPY_EXISTING ~uhogre05.cre~ ~override~
   WRITE_ASCII 0x250 "" #8
   WRITE_ASCII 0x248 "UHOGRE" #8
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/madulf.baf~
-        ~questpack/encounters/ding0/uhogre.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/madulf.baf~
+        ~d0questpack/encounters/ding0/uhogre.baf~
 
 COPY_EXISTING ~plshkn01.cre~ ~override~
               ~plshkn02.cre~ ~override~
@@ -299,7 +299,7 @@ COPY_EXISTING ~plshkn01.cre~ ~override~
 /////////////////////// MUMMY RESURRECTION ///////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/ding0/d0mumfig.cre~ ~override~
+COPY ~d0questpack/encounters/ding0/d0mumfig.cre~ ~override~
 
 COPY_EXISTING ~MUMGRE01.CRE~ ~override~
               ~RIFTCR03.CRE~ ~override~
@@ -309,7 +309,7 @@ COPY_EXISTING ~MUMGRE01.CRE~ ~override~
 COPY_EXISTING ~MUMMY.CRE~ ~override~
   WRITE_ASCII 0x250 "MUMMY01" #8
 
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/mummy01.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/mummy01.baf~
 
 COPY_EXISTING ~mumfig01.cre~ ~override~
   WRITE_BYTE 0x59 0
@@ -347,7 +347,7 @@ COPY_EXISTING sppr712.spl ~override/d0pr712.spl~
       speed = 0
   END
 
-COPY ~questpack/encounters/ding0/d0mummy.eff~ ~override~
+COPY ~d0questpack/encounters/ding0/d0mummy.eff~ ~override~
 
 COPY_EXISTING ~SPJA01.SPL~ ~override~
 //            ~SPWISH10.SPL~ ~override~ // exclude mass raise dead - only affects party members
@@ -437,7 +437,7 @@ COPY_EXISTING ~spin684.spl~ ~override~
   END
 BUT_ONLY
 
-COPY ~questpack/encounters/ding0/effs~ ~override~
+COPY ~d0questpack/encounters/ding0/effs~ ~override~
 
 COPY_EXISTING d0qpplka.eff ~override/flqppaln.eff~
   WRITE_LONG 0x10 103 // Change name
@@ -465,17 +465,17 @@ BUT_ONLY
 /////////////////////// RAKSHASAS AND FLAIL //////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP ~trrak01.bcs~ ~questpack/encounters/ding0/trrak01.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~trrak01.bcs~ ~d0questpack/encounters/ding0/trrak01.baf~ EVALUATE_BUFFER
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////// VAMPIRIC SIME ////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-COPY ~questpack/encounters/ding0/d0vamsim.cre~ ~override~
+COPY ~d0questpack/encounters/ding0/d0vamsim.cre~ ~override~
 
-EXTEND_TOP ~ppsime.bcs~ ~questpack/encounters/ding0/et_sime.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ppsime.bcs~ ~d0questpack/encounters/ding0/et_sime.baf~ EVALUATE_BUFFER
 
-EXTEND_BOTTOM ~ar1514.bcs~ ~questpack/encounters/ding0/et_spawnsime.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar1514.bcs~ ~d0questpack/encounters/ding0/et_spawnsime.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~vammat01.cre~ ~override~
   WRITE_ASCII 0x280 "VAMMAT01" #32
@@ -491,22 +491,22 @@ COPY_EXISTING ~vammat01.cre~ ~override~
 //////////////////////////////////////////////////////////////////////
 
 // Dialogue compilation
-COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/dialog.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/dialog.d~ USING
         ~%tra_path%/english/miscellaneous.tra~
         ~%tra_path%/%LANGUAGE%/miscellaneous.tra~
 ACTION_IF GAME_IS ~tob bgt bg2ee eet~ BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/encounters/ding0/25dialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/encounters/ding0/25dialog.d~ USING
           ~%tra_path%/english/miscellaneous.tra~
           ~%tra_path%/%LANGUAGE%/miscellaneous.tra~
 END
 
 // Cut: Lie to Gracen
-// EXTEND_TOP ~ar0801.bcs~ ~questpack/encounters/ding0/et_0801.baf~
-// COMPILE ~questpack/encounters/ding0/bodfgt03.baf~
+// EXTEND_TOP ~ar0801.bcs~ ~d0questpack/encounters/ding0/et_0801.baf~
+// COMPILE ~d0questpack/encounters/ding0/bodfgt03.baf~
 
 // Easter Egg
-COPY ~questpack/encounters/ding0/d0gnoll/d0gnoll.bam~ ~override~
-     ~questpack/encounters/ding0/d0gnoll/d0gnoll.vvc~ ~override~
+COPY ~d0questpack/encounters/ding0/d0gnoll/d0gnoll.bam~ ~override~
+     ~d0questpack/encounters/ding0/d0gnoll/d0gnoll.vvc~ ~override~
 // I promise this doesn't show up ingame!
 
-EXTEND_BOTTOM ~baldur.bcs~ ~questpack/encounters/ding0/d0gnoll/d0gnoll.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~baldur.bcs~ ~d0questpack/encounters/ding0/d0gnoll/d0gnoll.baf~ EVALUATE_BUFFER

@@ -1,9 +1,9 @@
 ACTION_IF !ENGINE_IS ~bg2ee~ BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/slaver/dialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/slaver/dialog.d~ USING
           ~%tra_path%/english/slaver.tra~
           ~%tra_path%/%LANGUAGE%/slaver.tra~
 END ELSE BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/slaver/dialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/slaver/dialog.d~ USING
           ~%tra_path%/english/slaver.tra~
           ~%tra_path%/ee/english/slaver.tra~
           ~%tra_path%/%LANGUAGE%/slaver.tra~
@@ -25,18 +25,18 @@ COPY_EXISTING ~slaver4.cre~ ~override/d0qpslav.cre~
   WRITE_ASCII 0x280 "D0QPSLAV" #32
   WRITE_ASCII 0x2cc "D0QPSLAV" #8
 
-EXTEND_TOP ~ar0800.bcs~ ~questpack/slaver/et_0800.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0800.bcs~ ~d0questpack/slaver/et_0800.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/slaver/d0qpslav.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/slaver/d0qpslav.baf~
 
-EXTEND_TOP ~kamir.bcs~ ~questpack/slaver/et_kamir.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~kamir.bcs~ ~d0questpack/slaver/et_kamir.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~kamir.cre~ ~override~
   WRITE_ASCII 0x268 "WTASIGHT" #8
   WRITE_LONG 0x1c 2500
 BUT_ONLY
 
-COPY ~questpack/slaver/d0jaisla.cre~ ~override~
-     ~questpack/slaver/d0jaisl2.cre~ ~override~
+COPY ~d0questpack/slaver/d0jaisla.cre~ ~override~
+     ~d0questpack/slaver/d0jaisl2.cre~ ~override~
   SAY NAME1 @305
   SAY NAME2 @305

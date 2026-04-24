@@ -37,19 +37,19 @@ BEGIN
   END
 END
 
-COPY ~questpack/lich/d0qpliph.itm~ ~override~
+COPY ~d0questpack/lich/d0qpliph.itm~ ~override~
   SAY NAME1 @131
   SAY NAME2 @131
   SAY IDENTIFIED_DESC @137
   SAY UNIDENTIFIED_DESC @137
 
-COPY ~questpack/lich/d0lich01.cre~ ~override~
-     ~questpack/lich/d0lich02.cre~ ~override~
+COPY ~d0questpack/lich/d0lich01.cre~ ~override~
+     ~d0questpack/lich/d0lich02.cre~ ~override~
   SAY NAME1 @129
   SAY NAME2 @129
   SAY AREA_FOREST @130
 
-COMPILE EVALUATE_BUFFER ~questpack/lich/dialog.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/lich/dialog.d~ USING
         ~%tra_path%/english/lich.tra~
         ~%tra_path%/%LANGUAGE%/lich.tra~
 
@@ -57,14 +57,14 @@ ADD_JOURNAL @16 @17 USING
             ~%tra_path%/english/lich.tra~
             ~%tra_path%/%LANGUAGE%/lich.tra~
 
-EXTEND_TOP ~ar2500.bcs~ ~questpack/lich/et_2500.baf~ EVALUATE_BUFFER USING
+EXTEND_TOP ~ar2500.bcs~ ~d0questpack/lich/et_2500.baf~ EVALUATE_BUFFER USING
                         ~%tra_path%/english/lich.tra~
                         ~%tra_path%/%LANGUAGE%/lich.tra~
 
-COMPILE EVALUATE_BUFFER ~questpack/lich/d0lich01.baf~
-        ~questpack/lich/d0lich02.baf~
-        ~questpack/lich/d0ar01.baf~
-        ~questpack/lich/d0wayin.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/lich/d0lich01.baf~
+        ~d0questpack/lich/d0lich02.baf~
+        ~d0questpack/lich/d0ar01.baf~
+        ~d0questpack/lich/d0wayin.baf~
 
 COPY_EXISTING ~ar2402.are~ ~override~
   LPF fj_are_structure

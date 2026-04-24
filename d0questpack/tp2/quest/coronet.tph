@@ -1,7 +1,7 @@
 ACTION_IF !FILE_EXISTS_IN_GAME j#klsyj.dlg AND
           !FILE_EXISTS_IN_GAME fwketo.dlg
 BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/coronet/dialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/coronet/dialog.d~ USING
           ~%tra_path%/english/coronet.tra~
           ~%tra_path%/%LANGUAGE%/coronet.tra~
 END
@@ -12,9 +12,9 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME j#klsyj.dlg AND
           FILE_EXISTS_IN_GAME fwketo.dlg
 BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/coronet/dialog.d~
-          ~questpack/coronet/kelseydialog.d~
-          ~questpack/coronet/ketodialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/coronet/dialog.d~
+          ~d0questpack/coronet/kelseydialog.d~
+          ~d0questpack/coronet/ketodialog.d~ USING
           ~%tra_path%/english/coronet.tra~
           ~%tra_path%/%LANGUAGE%/coronet.tra~
 END
@@ -22,8 +22,8 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME j#klsyj.dlg AND
           !FILE_EXISTS_IN_GAME fwketo.dlg
 BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/coronet/dialog.d~
-          ~questpack/coronet/kelseydialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/coronet/dialog.d~
+          ~d0questpack/coronet/kelseydialog.d~ USING
           ~%tra_path%/english/coronet.tra~
           ~%tra_path%/%LANGUAGE%/coronet.tra~
 END
@@ -31,8 +31,8 @@ END
 ACTION_IF !FILE_EXISTS_IN_GAME j#klsyj.dlg AND
           FILE_EXISTS_IN_GAME fwketo.dlg
 BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/coronet/dialog.d~
-          ~questpack/coronet/ketodialog.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/coronet/dialog.d~
+          ~d0questpack/coronet/ketodialog.d~ USING
           ~%tra_path%/english/coronet.tra~
           ~%tra_path%/%LANGUAGE%/coronet.tra~
 END
@@ -41,9 +41,9 @@ ADD_JOURNAL @426 @427 @428 @429 @430 @431 @432 @433 @434 @435 @436 @437 @438 @43
             ~%tra_path%/english/coronet.tra~
             ~%tra_path%/%LANGUAGE%/coronet.tra~
 
-COPY ~questpack/coronet/spells/d0ssleep.spl~ ~override~
+COPY ~d0questpack/coronet/spells/d0ssleep.spl~ ~override~
 
-COPY ~questpack/coronet/spells/d0poori.spl~ ~override~
+COPY ~d0questpack/coronet/spells/d0poori.spl~ ~override~
   LPF ADD_SPELL_EFFECT
     INT_VAR
       opcode = 143 // Create item in slot
@@ -54,62 +54,62 @@ COPY ~questpack/coronet/spells/d0poori.spl~ ~override~
       resource = minhp1
   END
 
-COPY ~questpack/coronet/creatures/d0thug2.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0thug2.cre~ ~override~
   ADD_CRE_ITEM blun01 #0 #0 #0 none weapon1 //Do not equip
 
-COPY ~questpack/coronet/creatures/d0thug.cre~ ~override~
-     ~questpack/coronet/creatures/d0thug3.cre~ ~override~
-     ~questpack/coronet/creatures/d0boy.cre~ ~override~
-     ~questpack/coronet/creatures/d0girl.cre~ ~override~
-     ~questpack/coronet/creatures/d0drunk.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0thug.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0thug3.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0boy.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0girl.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0drunk.cre~ ~override~
 
-COPY ~questpack/coronet/creatures/d0poor.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0poor.cre~ ~override~
   SAY NAME1 @118
   SAY NAME2 @118
 
-COPY ~questpack/coronet/creatures/d0lender.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0lender.cre~ ~override~
   SAY NAME1 @114
   SAY NAME2 @114
   REPLACE_TEXTUALLY "runenemey" "" (8)
 
-COPY ~questpack/coronet/creatures/d0lorick.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0lorick.cre~ ~override~
   SAY NAME1 @121
   SAY NAME2 @121
 
-COPY ~questpack/coronet/creatures/d0debt1.cre~ ~override~
-     ~questpack/coronet/creatures/d0debt2.cre~ ~override~
-     ~questpack/coronet/creatures/d0debt3.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0debt1.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0debt2.cre~ ~override~
+     ~d0questpack/coronet/creatures/d0debt3.cre~ ~override~
   SAY NAME1 @117
   SAY NAME2 @117
 
-COPY ~questpack/coronet/creatures/d0thug4.cre~ ~override~
+COPY ~d0questpack/coronet/creatures/d0thug4.cre~ ~override~
   SAY NAME1 @175
   SAY NAME2 @175
 
-COMPILE EVALUATE_BUFFER ~questpack/coronet/scripts/d0beat.baf~
-        ~questpack/coronet/scripts/d0beat2.baf~
-        ~questpack/coronet/scripts/d0boy.baf~
-        ~questpack/coronet/scripts/d0poor.baf~
-        ~questpack/coronet/scripts/d0thug.baf~
-        ~questpack/coronet/scripts/d0thug2.baf~
-        ~questpack/coronet/scripts/d0thug3.baf~
-        ~questpack/coronet/scripts/d0lender.baf~
-        ~questpack/coronet/scripts/d0debt.baf~
-        ~questpack/coronet/scripts/d0thug4.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/coronet/scripts/d0beat.baf~
+        ~d0questpack/coronet/scripts/d0beat2.baf~
+        ~d0questpack/coronet/scripts/d0boy.baf~
+        ~d0questpack/coronet/scripts/d0poor.baf~
+        ~d0questpack/coronet/scripts/d0thug.baf~
+        ~d0questpack/coronet/scripts/d0thug2.baf~
+        ~d0questpack/coronet/scripts/d0thug3.baf~
+        ~d0questpack/coronet/scripts/d0lender.baf~
+        ~d0questpack/coronet/scripts/d0debt.baf~
+        ~d0questpack/coronet/scripts/d0thug4.baf~
 
-EXTEND_TOP ~ar0400.bcs~ ~questpack/coronet/scripts/ar0400.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0400.bcs~ ~d0questpack/coronet/scripts/ar0400.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~ar0406.bcs~ ~questpack/coronet/scripts/ar0406.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0406.bcs~ ~d0questpack/coronet/scripts/ar0406.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ar0812.bcs ~questpack/coronet/scripts/ar0812.baf~ EVALUATE_BUFFER USING
+EXTEND_TOP ar0812.bcs ~d0questpack/coronet/scripts/ar0812.baf~ EVALUATE_BUFFER USING
                       ~%tra_path%/english/coronet.tra~
                       ~%tra_path%/%LANGUAGE%/coronet.tra~
 
-EXTEND_BOTTOM ~ar1602.bcs~ ~questpack/coronet/scripts/ar1602.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar1602.bcs~ ~d0questpack/coronet/scripts/ar1602.baf~ EVALUATE_BUFFER
 
-EXTEND_BOTTOM ~player1d.bcs~ ~questpack/coronet/scripts/player1d.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~player1d.bcs~ ~d0questpack/coronet/scripts/player1d.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~baldur.bcs~ ~questpack/coronet/scripts/et_spawn.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~baldur.bcs~ ~d0questpack/coronet/scripts/et_spawn.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0812.are~ ~override~
   WRITE_ASCII 0x94 "ar0812" #8
@@ -139,11 +139,11 @@ COPY_EXISTING ~mazzy.bcs~ ~override~
   END
 BUT_ONLY
 
-EXTEND_TOP ~mazzy.bcs~ ~questpack/coronet/scripts/et_mazzy.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~mazzy.bcs~ ~d0questpack/coronet/scripts/et_mazzy.baf~ EVALUATE_BUFFER
 
 // Surly returns
 COPY_EXISTING ~thumb.cre~ ~override~
   WRITE_ASCII 0x280 "thumb" #32
 BUT_ONLY
 
-EXTEND_TOP ~ar0313.bcs~ ~questpack/coronet/scripts/ar0313.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0313.bcs~ ~d0questpack/coronet/scripts/ar0313.baf~ EVALUATE_BUFFER

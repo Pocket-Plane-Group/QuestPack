@@ -1,4 +1,4 @@
-COPY ~questpack/galoomp/A#KRAM.CRE~ ~override~
+COPY ~d0questpack/galoomp/A#KRAM.CRE~ ~override~
   SAY NAME1 @211
   SAY NAME2 @211
   WRITE_ASCII 0x248 ~A#KRAM~ #8  //Override script
@@ -8,7 +8,7 @@ COPY ~questpack/galoomp/A#KRAM.CRE~ ~override~
 COPY_EXISTING ~A#KRAM.CRE~ ~override/A#KRAM2.CRE~
   WRITE_ASCII 0x2cc ~A#KRAM2~ #8 //Dialogue
 
-COMPILE EVALUATE_BUFFER ~questpack/galoomp/dialog.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/galoomp/dialog.d~ USING
         ~%tra_path%/english/galoomp.tra~
         ~%tra_path%/%LANGUAGE%/galoomp.tra~
 
@@ -16,7 +16,7 @@ ADD_JOURNAL @117 @118 @119 @120 USING
             ~%tra_path%/english/galoomp.tra~
             ~%tra_path%/%LANGUAGE%/galoomp.tra~
 
-COMPILE EVALUATE_BUFFER ~questpack/galoomp/A#KRAM.BAF~
+COMPILE EVALUATE_BUFFER ~d0questpack/galoomp/A#KRAM.BAF~
 
-EXTEND_TOP ~AR0500.BCS~ ~questpack/galoomp/AR0500.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~AR0700.BCS~ ~questpack/galoomp/AR0700.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0500.BCS~ ~d0questpack/galoomp/AR0500.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0700.BCS~ ~d0questpack/galoomp/AR0700.BAF~ EVALUATE_BUFFER

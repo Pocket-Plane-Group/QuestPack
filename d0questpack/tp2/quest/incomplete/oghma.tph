@@ -1,16 +1,16 @@
-COPY ~questpack/oghma/d0qplibr.cre~ ~override~
+COPY ~d0questpack/oghma/d0qplibr.cre~ ~override~
 SAY NAME1 @227
 SAY NAME2 @227
 
-COMPILE EVALUATE_BUFFER ~questpack/oghma/d0qplibr.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/oghma/d0qplibr.baf~
 
-COMPILE EVALUATE_BUFFER ~questpack/oghma/dialog.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/oghma/dialog.d~
 
 ACTION_IF NOT FILE_EXISTS ~override/ar0319.bcs~ THEN BEGIN
-COMPILE EVALUATE_BUFFER ~questpack/oghma/ar0319.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/oghma/ar0319.baf~
 END
 ACTION_IF FILE_EXISTS ~override/ar0319.bcs~ THEN BEGIN
-EXTEND_TOP ~ar0319.bcs~ ~questpack/oghma/ar0319.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0319.bcs~ ~d0questpack/oghma/ar0319.baf~ EVALUATE_BUFFER
 END
 
 COPY_EXISTING ~oghmonk1.cre~ ~override~

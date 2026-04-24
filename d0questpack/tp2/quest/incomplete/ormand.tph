@@ -35,11 +35,11 @@ WHILE ("%currentarea%" < "%#areas%") BEGIN
         WRITE_LONG ("%linkoffset%" + ("%currentlink%" * 216) + 84) 0 // 101 causes encounter to occur only once
 
 	    INNER_ACTION BEGIN
-			COPY ~questpack/ormand/et_baldur.baf~ ~questpack/ormand/et_baldur.baf~
+			COPY ~d0questpack/ormand/et_baldur.baf~ ~d0questpack/ormand/et_baldur.baf~
 			REPLACE_TEXTUALLY ~SetGlobal("D0Ormand","GLOBAL",3)~
 							  ~SetGlobal("D0Ormand","GLOBAL",3)
 							   SetEncounterProbability("ar0020","%dest_area_name%",101)~
-			COPY ~questpack/ormand/randenc/d00040.baf~ ~questpack/ormand/randenc/d00040.baf~
+			COPY ~d0questpack/ormand/randenc/d00040.baf~ ~d0questpack/ormand/randenc/d00040.baf~
 			REPLACE_TEXTUALLY ~RESPONSE #100~
 							  ~RESPONSE #100
 							   SetEncounterProbability("ar0020","%dest_area_name%",0)~
@@ -53,27 +53,27 @@ WHILE ("%currentarea%" < "%#areas%") BEGIN
 END
 BUT_ONLY_IF_IT_CHANGES
 
-COPY ~questpack/ormand/d0qpore0.cre~ ~override~
+COPY ~d0questpack/ormand/d0qpore0.cre~ ~override~
 SAY NAME1 @310
 SAY NAME2 @310
-COPY ~questpack/ormand/d0qpore1.cre~ ~override~
+COPY ~d0questpack/ormand/d0qpore1.cre~ ~override~
 SAY NAME1 @311
 SAY NAME2 @311
-COPY ~questpack/ormand/d0qpore2.cre~ ~override~
+COPY ~d0questpack/ormand/d0qpore2.cre~ ~override~
 SAY NAME1 @312
 SAY NAME2 @312
-COPY ~questpack/ormand/d0qpore3.cre~ ~override~
+COPY ~d0questpack/ormand/d0qpore3.cre~ ~override~
 SAY NAME1 @313
 SAY NAME2 @313
-COPY ~questpack/ormand/d0qpore4.cre~ ~override~
+COPY ~d0questpack/ormand/d0qpore4.cre~ ~override~
 SAY NAME1 @314
 SAY NAME2 @314
 
-COMPILE EVALUATE_BUFFER ~questpack/ormand/compile~
+COMPILE EVALUATE_BUFFER ~d0questpack/ormand/compile~
 
-COMPILE EVALUATE_BUFFER ~questpack/ormand/randenc/d00040.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/ormand/randenc/d00040.baf~
 
-EXTEND_TOP ~baldur.bcs~ ~questpack/ormand/et_baldur.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~baldur.bcs~ ~d0questpack/ormand/et_baldur.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~bow12.itm~ ~override~
 SAY IDENTIFIED_DESC @315

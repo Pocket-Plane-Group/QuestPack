@@ -1,7 +1,7 @@
-COMPILE EVALUATE_BUFFER ~questpack/thieves/dialog0.d~ // Rayic
-        ~questpack/thieves/dialog1.d~ // Chapter 2
-        ~questpack/thieves/dialog2.d~ // Chapter 6 for Mae'Var
-        ~questpack/thieves/dialog3.d~ USING // Chapter 6 for Brega
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/dialog0.d~ // Rayic
+        ~d0questpack/thieves/dialog1.d~ // Chapter 2
+        ~d0questpack/thieves/dialog2.d~ // Chapter 6 for Mae'Var
+        ~d0questpack/thieves/dialog3.d~ USING // Chapter 6 for Brega
         ~%tra_path%/english/thieves.tra~
         ~%tra_path%/%LANGUAGE%/thieves.tra~
 
@@ -67,8 +67,8 @@ COPY_EXISTING ~LATHALRM.BCS~ ~override~
 BUT_ONLY
 
 // Ghrey IM8
-COMPILE EVALUATE_BUFFER ~questpack/thieves/dialog4.d~
-        ~questpack/thieves/ghrey/j#im8grd.baf~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/dialog4.d~
+        ~d0questpack/thieves/ghrey/j#im8grd.baf~ USING
         ~%tra_path%/english/thieves.tra~
         ~%tra_path%/%LANGUAGE%/thieves.tra~
 
@@ -80,54 +80,54 @@ COPY_EXISTING ~AR0528.are~ ~override~
   WRITE_ASCII 0x94 ~AR0528~ #8
 BUT_ONLY
 
-COPY ~questpack/thieves/ghrey/j#im8grd.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8grd.cre~ ~override~
   SAY NAME1 @261
   SAY NAME2 @261
 
-COPY ~questpack/thieves/ghrey/j#im8thg.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8thg.cre~ ~override~
   SAY NAME1 #22657
   SAY NAME2 #22657
 
-COPY ~questpack/thieves/ghrey/j#im8gr2.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8gr2.cre~ ~override~
   SAY NAME1 @261
   SAY NAME2 @261
 
-COPY ~questpack/thieves/ghrey/j#im8wif.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8wif.cre~ ~override~
   SAY NAME1 @262
   SAY NAME2 @262
 
-COPY ~questpack/thieves/ghrey/j#im8kid.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8kid.cre~ ~override~
   SAY NAME1 @263
   SAY NAME2 @263
 
-COPY ~questpack/thieves/ghrey/j#im8ki2.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8ki2.cre~ ~override~
   SAY NAME1 @264
   SAY NAME2 @264
 
-COPY ~questpack/thieves/ghrey/j#im8boo.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8boo.cre~ ~override~
   SAY NAME1 #35922
   SAY NAME2 #35922
 
-COPY ~questpack/thieves/ghrey/j#im8tor.cre~ ~override~
-     ~questpack/thieves/ghrey/j#im8to2.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/j#im8tor.cre~ ~override~
+     ~d0questpack/thieves/ghrey/j#im8to2.cre~ ~override~
   SAY NAME1 @265
   SAY NAME2 @265
 
-COPY ~questpack/thieves/ghrey/d0qpgude.cre~ ~override~
+COPY ~d0questpack/thieves/ghrey/d0qpgude.cre~ ~override~
   WRITE_ASCII 0x248 "d0qpgude" #8
 
-EXTEND_TOP ~AR0500.bcs~ ~questpack/thieves/ghrey/adar0500.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR0527.bcs~ ~questpack/thieves/ghrey/adar0527.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR0528.bcs~ ~questpack/thieves/ghrey/adar0528.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR0307.bcs~ ~questpack/thieves/ghrey/adar0307.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~AR0329.bcs~ ~questpack/thieves/ghrey/et_0329.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0500.bcs~ ~d0questpack/thieves/ghrey/adar0500.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0527.bcs~ ~d0questpack/thieves/ghrey/adar0527.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0528.bcs~ ~d0questpack/thieves/ghrey/adar0528.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0307.bcs~ ~d0questpack/thieves/ghrey/adar0307.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0329.bcs~ ~d0questpack/thieves/ghrey/et_0329.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/ghrey/d0qpgude.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/ghrey/d0qpgude.baf~
 
 // RAYIC STUFF
 STRING_SET 34211 @99948
 
-COPY ~questpack/thieves/items/d0qprayi.itm~ ~override~
+COPY ~d0questpack/thieves/items/d0qprayi.itm~ ~override~
   SAY NAME2 @145
   SAY IDENTIFIED_DESC @144
 
@@ -135,12 +135,12 @@ COPY_EXISTING dcowl1.cre override
   ADD_CRE_ITEM d0qprayi #0 #0 #0 identified ~rring lring~
 BUT_ONLY
 
-COPY ~questpack/thieves/creatures/d0qpback.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/d0qpback.cre~ ~override~
   SAY NAME1 @146
   SAY NAME2 @146
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/rayic.baf~
-        ~questpack/thieves/scripts/d0edwinh.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/rayic.baf~
+        ~d0questpack/thieves/scripts/d0edwinh.baf~
 
 COPY_EXISTING ~ar0317.are~ ~override~
   GET_OFFSET_ARRAY triggers 0x5c 4 0x5a 2 0 0 0xc4
@@ -153,21 +153,21 @@ COPY_EXISTING ~ar0317.are~ ~override~
 BUT_ONLY
 
 ACTION_IF GAME_IS ~tob bgt bg2ee eet~ BEGIN
-  COMPILE EVALUATE_BUFFER ~questpack/thieves/25dialog0.d~ USING
+  COMPILE EVALUATE_BUFFER ~d0questpack/thieves/25dialog0.d~ USING
           ~%tra_path%/english/thieves.tra~
           ~%tra_path%/%LANGUAGE%/thieves.tra~
 
-  EXTEND_BOTTOM ~ar5500.bcs~ ~questpack/thieves/scripts/et_5500.baf~ EVALUATE_BUFFER
+  EXTEND_BOTTOM ~ar5500.bcs~ ~d0questpack/thieves/scripts/et_5500.baf~ EVALUATE_BUFFER
 END
 
 // BASIC THIEVES STUFF
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/shouts/stdeath.baf~
-        ~questpack/thieves/scripts/shouts/ptdeath.baf~
-        ~questpack/thieves/scripts/shouts/stguard1.baf~
-        ~questpack/thieves/scripts/shouts/mvally.baf~
-        ~questpack/thieves/scripts/shouts/mvally2.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/shouts/stdeath.baf~
+        ~d0questpack/thieves/scripts/shouts/ptdeath.baf~
+        ~d0questpack/thieves/scripts/shouts/stguard1.baf~
+        ~d0questpack/thieves/scripts/shouts/mvally.baf~
+        ~d0questpack/thieves/scripts/shouts/mvally2.baf~
 
-EXTEND_TOP ~edwin.bcs~ ~questpack/thieves/scripts/et_edwin.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~edwin.bcs~ ~d0questpack/thieves/scripts/et_edwin.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0301.are~ ~override~
               ~ar0302.are~ ~override~
@@ -175,9 +175,9 @@ COPY_EXISTING ~ar0301.are~ ~override~
   REPLACE_TEXTUALLY "ptdeath" "stdeath" (8)
 BUT_ONLY
 
-EXTEND_TOP ~baldur.bcs~ ~questpack/thieves/scripts/et_spawn.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~baldur.bcs~ ~d0questpack/thieves/scripts/et_spawn.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~ar0300.bcs~ ~questpack/thieves/scripts/et_0300.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0300.bcs~ ~d0questpack/thieves/scripts/et_0300.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0300.bcs~ ~override~
   DECOMPILE_AND_PATCH BEGIN
@@ -199,17 +199,17 @@ COPY_EXISTING ~ar0300.are~ ~override~
   END
 BUT_ONLY
 
-EXTEND_TOP ~ar0301.bcs~ ~questpack/thieves/scripts/et_0301.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0301.bcs~ ~d0questpack/thieves/scripts/et_0301.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0306.are~ ~override~
   WRITE_ASCII 0x94 "ar0306" #8
 BUT_ONLY
 
-EXTEND_TOP ~ar0306.bcs~ ~questpack/thieves/scripts/et_0306.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0328.bcs~ ~questpack/thieves/scripts/et_0306.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0306.bcs~ ~d0questpack/thieves/scripts/et_0306.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0328.bcs~ ~d0questpack/thieves/scripts/et_0306.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~ar0307.bcs~ ~questpack/thieves/scripts/et_0307.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0329.bcs~ ~questpack/thieves/scripts/et_0307.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0307.bcs~ ~d0questpack/thieves/scripts/et_0307.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0329.bcs~ ~d0questpack/thieves/scripts/et_0307.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar0305.are~ ~override~
   WRITE_ASCII 0x94 "AR0305" #8
@@ -219,20 +219,20 @@ COPY_EXISTING ~ar0327.are~ ~override~
   WRITE_ASCII 0x94 "AR0327" #8
 BUT_ONLY
 
-EXTEND_TOP ~ar0305.bcs~ ~questpack/thieves/scripts/et_0305.baf~ EVALUATE_BUFFER
-EXTEND_TOP ~ar0327.bcs~ ~questpack/thieves/scripts/et_0305.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0305.bcs~ ~d0questpack/thieves/scripts/et_0305.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0327.bcs~ ~d0questpack/thieves/scripts/et_0305.baf~ EVALUATE_BUFFER
 
 // LARELL'S GOONS
-COPY ~questpack/thieves/creatures/larell/d0nightk.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/larell/d0nightk.cre~ ~override~
   SAY NAME1 @103
   SAY NAME2 @103
 
-COPY ~questpack/thieves/creatures/larell/d0night2.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/larell/d0night2.cre~ ~override~
   SAY NAME1 @109
   SAY NAME2 @109
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/d0nightk.baf~
-        ~questpack/thieves/scripts/d0night2.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/d0nightk.baf~
+        ~d0questpack/thieves/scripts/d0night2.baf~
 
 COPY_EXISTING maevar.cre override
   WRITE_SHORT 0x24 70 // HP
@@ -272,12 +272,12 @@ COPY_EXISTING mvpries.cre override
   ADD_CRE_ITEM helm01 #0 #0 #0 none helmet
 BUT_ONLY
 
-COPY ~questpack/thieves/creatures/maevar/d0msngr.cre~ ~override~
-     ~questpack/thieves/items/d0leat08.itm~ ~override~
+COPY ~d0questpack/thieves/creatures/maevar/d0msngr.cre~ ~override~
+     ~d0questpack/thieves/items/d0leat08.itm~ ~override~
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/maevar.baf~
-        ~questpack/thieves/scripts/d0mvguar.baf~
-        ~questpack/thieves/scripts/d0mvcler.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/maevar.baf~
+        ~d0questpack/thieves/scripts/d0mvguar.baf~
+        ~d0questpack/thieves/scripts/d0mvcler.baf~
 
 COPY_EXISTING aran.cre override
   WRITE_BYTE 0x234 16 // Level 1
@@ -330,19 +330,19 @@ COPY_EXISTING arnfgt04.cre override
 BUT_ONLY
 
 // ARAN'S GOONS
-COPY ~questpack/thieves/creatures/aran/d0magcle.cre~ ~override~
-     ~questpack/thieves/creatures/aran/d0renrev.cre~ ~override~
-     ~questpack/thieves/creatures/aran/d0renal.cre~ ~override~
-     ~questpack/thieves/creatures/aran/d0arbkup.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/aran/d0magcle.cre~ ~override~
+     ~d0questpack/thieves/creatures/aran/d0renrev.cre~ ~override~
+     ~d0questpack/thieves/creatures/aran/d0renal.cre~ ~override~
+     ~d0questpack/thieves/creatures/aran/d0arbkup.cre~ ~override~
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/d0aran.baf~
-        ~questpack/thieves/scripts/d0aranm.baf~
-        ~questpack/thieves/scripts/stdeathm.baf~
-        ~questpack/thieves/scripts/d0magcle.baf~
-        ~questpack/thieves/scripts/d0qpargu.baf~
-        ~questpack/thieves/scripts/d0aranbk.baf~
-        ~questpack/thieves/scripts/d0renal.baf~
-        ~questpack/thieves/scripts/d0awbuff.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/d0aran.baf~
+        ~d0questpack/thieves/scripts/d0aranm.baf~
+        ~d0questpack/thieves/scripts/stdeathm.baf~
+        ~d0questpack/thieves/scripts/d0magcle.baf~
+        ~d0questpack/thieves/scripts/d0qpargu.baf~
+        ~d0questpack/thieves/scripts/d0aranbk.baf~
+        ~d0questpack/thieves/scripts/d0renal.baf~
+        ~d0questpack/thieves/scripts/d0awbuff.baf~
 
 COPY_EXISTING ~FLYFGT02.CRE~ ~override~
               ~FLYFGT03.CRE~ ~override~
@@ -403,30 +403,30 @@ COPY_EXISTING ~misc4v.itm~ ~override/d0letter.itm~
   SAY UNIDENTIFIED_DESC @102
   SAY IDENTIFIED_DESC @102
 
-COPY ~questpack/thieves/items/d0reward.itm~ ~override~
+COPY ~d0questpack/thieves/items/d0reward.itm~ ~override~
   SAY NAME1 #6797
   SAY NAME2 @105
   SAY UNIDENTIFIED_DESC #6798
    SAY IDENTIFIED_DESC @106
 
-COPY ~questpack/thieves/items/d0rewar2.itm~ ~override~
+COPY ~d0questpack/thieves/items/d0rewar2.itm~ ~override~
   SAY NAME1 #6348
   SAY NAME2 @107
   SAY UNIDENTIFIED_DESC #17054
   SAY IDENTIFIED_DESC @108
 
-COPY ~questpack/thieves/items/d0reward.bam~ ~override~
+COPY ~d0questpack/thieves/items/d0reward.bam~ ~override~
 
-COPY ~questpack/thieves/items/d0dart01.itm~ ~override~
+COPY ~d0questpack/thieves/items/d0dart01.itm~ ~override~
   SAY NAME2 @316
   SAY IDENTIFIED_DESC @317
 
-COPY ~questpack/thieves/items/d0dart01.bam~ ~override~
+COPY ~d0questpack/thieves/items/d0dart01.bam~ ~override~
 
 // CHAPTER 6
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/C6SPWN3.BAF~
-        ~questpack/thieves/scripts/C6SPWN4.BAF~
-        ~questpack/thieves/scripts/C6SPWN5.BAF~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/C6SPWN3.BAF~
+        ~d0questpack/thieves/scripts/C6SPWN4.BAF~
+        ~d0questpack/thieves/scripts/C6SPWN5.BAF~
 
 COPY_EXISTING ~C6TANOV.BCS~ ~override~
   DECOMPILE_AND_PATCH BEGIN
@@ -449,19 +449,19 @@ COPY_EXISTING ~AR0809.BCS~ ~override~
 BUT_ONLY
 
 // GUARDS
-COPY ~questpack/thieves/creatures/d0msngr2.cre~ ~override~
-     ~questpack/thieves/creatures/d0guard.cre~ ~override~
-     ~questpack/thieves/creatures/d0guard2.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/d0msngr2.cre~ ~override~
+     ~d0questpack/thieves/creatures/d0guard.cre~ ~override~
+     ~d0questpack/thieves/creatures/d0guard2.cre~ ~override~
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/d0guards.baf~
-        ~questpack/thieves/scripts/d0guard4.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/d0guards.baf~
+        ~d0questpack/thieves/scripts/d0guard4.baf~
 
-COPY ~questpack/thieves/creatures/d0guard.cre~ ~override/d0guard3.cre~
+COPY ~d0questpack/thieves/creatures/d0guard.cre~ ~override/d0guard3.cre~
   WRITE_ASCII 0x248 "D0NOTHIN" #8
   WRITE_SHORT 0x28 24832
   WRITE_ASCII 0x2cc "D0GUARD3" #8
 
-COPY ~questpack/thieves/creatures/d0guard4.cre~ ~override~
+COPY ~d0questpack/thieves/creatures/d0guard4.cre~ ~override~
   SAY NAME1 @205
   SAY NAME2 @205
 
@@ -502,7 +502,7 @@ COPY_EXISTING ~arnman05.cre~ ~override~
   WRITE_ASCII 0x260 "WTASIGHT" #8
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~questpack/thieves/scripts/d0prison.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/thieves/scripts/d0prison.baf~
 
 COPY_EXISTING ~arnfgt04.cre~ ~override/d0arbku2.cre~
   WRITE_ASCII 0x280 "d0arbkup" #32
@@ -547,5 +547,5 @@ COPY_EXISTING ~ar0329.are~ ~override~
 BUT_ONLY
 
 // Gaelan turns hostile when he should
-EXTEND_BOTTOM ~ar0311.bcs~ ~questpack/thieves/scripts/et_gae1.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ar0312.bcs~ ~questpack/thieves/scripts/et_gae2.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0311.bcs~ ~d0questpack/thieves/scripts/et_gae1.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0312.bcs~ ~d0questpack/thieves/scripts/et_gae2.baf~ EVALUATE_BUFFER

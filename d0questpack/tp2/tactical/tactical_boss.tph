@@ -1,7 +1,7 @@
-INCLUDE ~questpack/tp2/ds.tpa~
+INCLUDE ~d0questpack/tp2/ds.tpa~
 
-COMPILE EVALUATE_BUFFER ~questpack/boss/compile~
+COMPILE EVALUATE_BUFFER ~d0questpack/boss/compile~
 
-EXTEND_BOTTOM ~ppbodhi4.bcs~ ~questpack/boss/ppbodhi4.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ppbodhi4.bcs~ ~d0questpack/boss/ppbodhi4.baf~ EVALUATE_BUFFER
 
 LAF fix_c6scripts END

@@ -1,10 +1,10 @@
-COMPILE EVALUATE_BUFFER ~questpack/druid/dialog.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/druid/dialog.d~
 
 COPY_EXISTING ~cefald02.cre~ ~override~
 WRITE_BYTE 0x237 2
 WRITE_BYTE 0x275 2
-COMPILE EVALUATE_BUFFER ~questpack/druid/cefald01.baf~
-        ~questpack/druid/cefaldor.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/druid/cefald01.baf~
+        ~d0questpack/druid/cefaldor.baf~
 COPY_EXISTING ~wolfdr01.cre~ ~override/wolfd1.cre~
 WRITE_ASCII 0x280 "wolfd1"
 
@@ -26,7 +26,7 @@ WRITE_BYTE 0x23f 20
 WRITE_BYTE 0x240 1
 REPLACE_TEXTUALLY ~minhp1~ ~ring95~
 
-COMPILE EVALUATE_BUFFER ~questpack/druid/d0trgrd.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/druid/d0trgrd.baf~
 COPY_EXISTING ~trgrd01.cre~ ~override~
               ~trgrd02.cre~ ~override~
 WRITE_ASCII 0x250 "d0trgrd"
@@ -35,6 +35,6 @@ WRITE_ASCII 0x258 "MAGE8A"
 COPY_EXISTING ~trgrd03.cre~ ~override~
 WRITE_ASCII 0x258 "d0trgrd"
 
-EXTEND_TOP ~shout.bcs~ ~questpack/druid/d0trgrd.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~shout.bcs~ ~d0questpack/druid/d0trgrd.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~ar1901.bcs~ ~questpack/druid/et_1901.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar1901.bcs~ ~d0questpack/druid/et_1901.baf~ EVALUATE_BUFFER

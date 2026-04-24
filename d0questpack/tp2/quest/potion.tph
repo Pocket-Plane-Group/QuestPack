@@ -1,9 +1,9 @@
-COPY ~questpack/potion/d0qppotn.cre~ ~override~
+COPY ~d0questpack/potion/d0qppotn.cre~ ~override~
   SAY NAME1 @134
   SAY NAME2 @134
 
-COPY ~questpack/potion/d0qppot1.spl~ ~override~
-     ~questpack/potion/d0qppot2.spl~ ~override~
+COPY ~d0questpack/potion/d0qppot1.spl~ ~override~
+     ~d0questpack/potion/d0qppot2.spl~ ~override~
   SAY NAME1 #-1
   SAY NAME2 #-1
   SAY IDENTIFIED_DESC #-1
@@ -18,15 +18,15 @@ COPY_EXISTING d0qppot1.spl override
       parameter2 = 0x400003
   END
 
-COPY ~questpack/potion/potn33.itm~ ~override~
+COPY ~d0questpack/potion/potn33.itm~ ~override~
 
-COPY ~questpack/potion/d0qppot1.itm~ ~override~
+COPY ~d0questpack/potion/d0qppot1.itm~ ~override~
   SAY NAME1 @149
   SAY NAME2 @149
   SAY UNIDENTIFIED_DESC @150
   SAY IDENTIFIED_DESC @150
 
-COPY ~questpack/potion/d0qppot2.itm~ ~override~
+COPY ~d0questpack/potion/d0qppot2.itm~ ~override~
   SAY NAME1 @166
   SAY NAME2 @166
   SAY UNIDENTIFIED_DESC @167
@@ -48,14 +48,14 @@ COPY_EXISTING ~clkid.cre~ ~override/d0qpjan.cre~
   WRITE_ASCII 0x280 "D0QPJAN" #32
   WRITE_ASCII 0x2cc "D0QPJAN" #8
 
-COPY ~questpack/potion/potn38.itm~ ~override~
+COPY ~d0questpack/potion/potn38.itm~ ~override~
   SAY IDENTIFIED_DESC @180
 
-EXTEND_BOTTOM ~ar0701.bcs~ ~questpack/potion/ar0701.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar0701.bcs~ ~d0questpack/potion/ar0701.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~ar0500.bcs~ ~questpack/potion/ar0500.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0500.bcs~ ~d0questpack/potion/ar0500.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/potion/d0qppotn.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/potion/d0qppotn.baf~
 
 COPY_EXISTING ~murcrag.sto~ ~override~
   ADD_STORE_ITEM "potn38" AFTER "potn29" #1 #0 #0 ~IDENTIFIED~ #4
@@ -127,7 +127,7 @@ COPY_EXISTING ~spwi106.spl~ ~override~
   END
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~questpack/potion/potiontra.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/potion/potiontra.d~ USING
         ~%tra_path%/english/potion.tra~
         ~%tra_path%/%LANGUAGE%/potion.tra~
 

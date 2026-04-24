@@ -1,8 +1,8 @@
-BACKUP ~questpack/backup~
+BACKUP ~d0questpack/backup~
 AUTHOR ~SimDing0 (http://forums.pocketplane.net/index.php/board,21.0.html)~
 
 VERSION ~v3.5~
-README ~questpack/readme_%LANGUAGE%.html~ ~questpack/readme.html~
+README ~d0questpack/readme_%LANGUAGE%.html~ ~d0questpack/readme.html~
 
 // SPECIFICS USED:
 // 133
@@ -89,9 +89,9 @@ ALWAYS
 
   // UNINSTALL Setup-GbG.tp2 1
 
-  INCLUDE ~questpack/tp2/lib.tpa~
+  INCLUDE ~d0questpack/tp2/lib.tpa~
 
-  OUTER_SPRINT tra_path ~questpack/translations~
+  OUTER_SPRINT tra_path ~d0questpack/translations~
 
   /* QP has a few strings which differ between regular and EE BG2 */
   ACTION_IF ENGINE_IS ~bg2ee~ BEGIN
@@ -118,7 +118,7 @@ ALWAYS
 
   // We only perform this patch once per install.
   ACTION_IF !FILE_EXISTS_IN_GAME fl#qp_standardpatch.mrk BEGIN
-    INCLUDE ~questpack/tp2/standardpatch.tph~
+    INCLUDE ~d0questpack/tp2/standardpatch.tph~
     COPY_EXISTING sw1h01.itm "override/fl#qp_standardpatch.mrk"
   END
 END
@@ -129,44 +129,44 @@ END
 
 LANGUAGE ~English~
          ~english~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
 LANGUAGE ~Spanish~
          ~spanish~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/spanish/d0quest.tra~
-         ~questpack/translations/spanish/setup-%WEIDU_OS%.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/spanish/d0quest.tra~
+         ~d0questpack/translations/spanish/setup-%WEIDU_OS%.tra~
 LANGUAGE ~German~
          ~german~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/german/d0quest.tra~
-         ~questpack/translations/german/setup-%WEIDU_OS%.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/german/d0quest.tra~
+         ~d0questpack/translations/german/setup-%WEIDU_OS%.tra~
 LANGUAGE ~French~
          ~french~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/french/d0quest.tra~
-         ~questpack/translations/french/setup-%WEIDU_OS%.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/french/d0quest.tra~
+         ~d0questpack/translations/french/setup-%WEIDU_OS%.tra~
 LANGUAGE ~Italian~
          ~italian~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/italian/d0quest.tra~
-         ~questpack/translations/italian/setup-%WEIDU_OS%.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/italian/d0quest.tra~
+         ~d0questpack/translations/italian/setup-%WEIDU_OS%.tra~
 LANGUAGE ~Russian~
          ~russian~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/russian/d0quest.tra~
-         ~questpack/translations/russian/setup-%WEIDU_OS%.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/russian/d0quest.tra~
+         ~d0questpack/translations/russian/setup-%WEIDU_OS%.tra~
 LANGUAGE ~Simplified Chinese (by Lzw104522773)~
          ~schinese~
-         ~questpack/translations/english/d0quest.tra~
-         ~questpack/translations/english/setup.tra~
-         ~questpack/translations/schinese/d0quest.tra~
-         ~questpack/translations/schinese/setup.tra~
+         ~d0questpack/translations/english/d0quest.tra~
+         ~d0questpack/translations/english/setup.tra~
+         ~d0questpack/translations/schinese/d0quest.tra~
+         ~d0questpack/translations/schinese/setup.tra~
 
 
 //////////////////////////////////////////////////////////////////////
@@ -185,7 +185,7 @@ BEGIN @14 // General AI Improvements
 DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/tactical/AI_core.tph~
+INCLUDE ~d0questpack/tp2/tactical/AI_core.tph~
 
 //////////////////////////////////////////////////////////////////////
 // CREATURE ENHANCEMENTS
@@ -196,24 +196,24 @@ DESIGNATED 1
 REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ OR (GAME_IS ~soa tob bgt~ AND MOD_IS_INSTALLED tobex.tp2 100)) @97
 SUBCOMPONENT @34 // Creature & Area Improvements
 
-INCLUDE ~questpack/tp2/tactical/tactical_boss.tph~
-INCLUDE ~questpack/tp2/tactical/tactical_creature.tph~
-INCLUDE ~questpack/tp2/tactical/tactical_area.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_boss.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_creature.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_area.tph~
 
 BEGIN @35 // All Creature Improvements
 DESIGNATED 2
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 SUBCOMPONENT @34 // Creature & Area Improvements
 
-INCLUDE ~questpack/tp2/tactical/tactical_boss.tph~
-INCLUDE ~questpack/tp2/tactical/tactical_creature.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_boss.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_creature.tph~
 
 BEGIN @32 // Boss Improvements Only
 DESIGNATED 3
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 SUBCOMPONENT @34 // Creature & Area Improvements
 
-INCLUDE ~questpack/tp2/tactical/tactical_boss.tph~
+INCLUDE ~d0questpack/tp2/tactical/tactical_boss.tph~
 
 //////////////////////////////////////////////////////////////////////
 // MISCELLANEOUS ENHANCEMENTS
@@ -230,11 +230,11 @@ UNINSTALL Setup-LMA.tp2 0
 
 OUTER_SET fl#ADDITIONAL_RANDOM_ENCOUNTERS = 1
 
-INCLUDE ~questpack/tp2/quest/miscellaneous.tph~
+INCLUDE ~d0questpack/tp2/quest/miscellaneous.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/encounters/audio~
+    audio_path = ~d0questpack/encounters/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -250,11 +250,11 @@ UNINSTALL Setup-LMA.tp2 0
 
 OUTER_SET fl#ADDITIONAL_RANDOM_ENCOUNTERS = 0
 
-INCLUDE ~questpack/tp2/quest/miscellaneous.tph~
+INCLUDE ~d0questpack/tp2/quest/miscellaneous.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/encounters/audio~
+    audio_path = ~d0questpack/encounters/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -267,11 +267,11 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL setup-ghreyim8.tp2 0
 
-INCLUDE ~questpack/tp2/quest/thieves.tph~
+INCLUDE ~d0questpack/tp2/quest/thieves.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/thieves/audio~
+    audio_path = ~d0questpack/thieves/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -282,7 +282,7 @@ BEGIN @2 // Alternative Harper/Xzar Plot
 DESIGNATED 6
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/harpers.tph~
+INCLUDE ~d0questpack/tp2/quest/harpers.tph~
 
 //////////////////////////////////////////////////////////////////////
 // FALLEN PALADINS
@@ -292,11 +292,11 @@ BEGIN @3 // Extended Reynald Sequence
 DESIGNATED 7
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/paladins.tph~
+INCLUDE ~d0questpack/tp2/quest/paladins.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/reynald/audio~
+    audio_path = ~d0questpack/reynald/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -307,11 +307,11 @@ BEGIN @4 // Intrigue In The Copper Coronet
 DESIGNATED 8
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/coronet.tph~
+INCLUDE ~d0questpack/tp2/quest/coronet.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/coronet/audio~
+    audio_path = ~d0questpack/coronet/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -324,7 +324,7 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL ~setup-potionquest.tp2~ 0
 
-INCLUDE ~questpack/tp2/quest/potion.tph~
+INCLUDE ~d0questpack/tp2/quest/potion.tph~
 
 //////////////////////////////////////////////////////////////////////
 // HELL TRIALS
@@ -336,7 +336,7 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL ~setup-hell.tp2~ 0
 
-INCLUDE ~questpack/tp2/quest/helltest.tph~
+INCLUDE ~d0questpack/tp2/quest/helltest.tph~
 
 //////////////////////////////////////////////////////////////////////
 // IMPROVED OASIS
@@ -350,8 +350,8 @@ SUBCOMPONENT @13 // Improved Oasis II
 UNINSTALL ~setup-oasis.tp2~ 0
 UNINSTALL ~setup-oasis.tp2~ 1
 
-INCLUDE ~questpack/tp2/quest/oasis_dlg.tph~
-INCLUDE ~questpack/tp2/quest/oasis_combat.tph~
+INCLUDE ~d0questpack/tp2/quest/oasis_dlg.tph~
+INCLUDE ~d0questpack/tp2/quest/oasis_combat.tph~
 
 BEGIN @12 // IO2 Dialogue Enhancement Only
 DESIGNATED 12
@@ -361,7 +361,7 @@ SUBCOMPONENT @13 // Improved Oasis II
 UNINSTALL ~setup-oasis.tp2~ 0
 UNINSTALL ~setup-oasis.tp2~ 1
 
-INCLUDE ~questpack/tp2/quest/oasis_dlg.tph~
+INCLUDE ~d0questpack/tp2/quest/oasis_dlg.tph~
 
 //////////////////////////////////////////////////////////////////////
 // SANIK
@@ -371,7 +371,7 @@ BEGIN @17 // Saving Sanik In Brynnlaw
 DESIGNATED 13
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/sanik.tph~
+INCLUDE ~d0questpack/tp2/quest/sanik.tph~
 
 //////////////////////////////////////////////////////////////////////
 // GALOOMP
@@ -383,7 +383,7 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL Setup-AndyrIM5.tp2 0
 
-INCLUDE ~questpack/tp2/quest/galoomp.tph~
+INCLUDE ~d0questpack/tp2/quest/galoomp.tph~
 
 //////////////////////////////////////////////////////////////////////
 // PHLUAFAE
@@ -395,11 +395,11 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL Setup-BonsPromise.tp2 0
 
-INCLUDE ~questpack/tp2/quest/phluafae.tph~
+INCLUDE ~d0questpack/tp2/quest/phluafae.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/phluafae/audio~
+    audio_path = ~d0questpack/phluafae/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -412,11 +412,11 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
 UNINSTALL setup-icekiss.tp2 0
 
-INCLUDE ~questpack/tp2/quest/besamen.tph~
+INCLUDE ~d0questpack/tp2/quest/besamen.tph~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/besamen/audio~
+    audio_path = ~d0questpack/besamen/audio~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -427,7 +427,7 @@ BEGIN @21 // Further Slaver Involvement
 DESIGNATED 17
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/slavers.tph~
+INCLUDE ~d0questpack/tp2/quest/slavers.tph~
 
 //////////////////////////////////////////////////////////////////////
 // SOLAMNIC KNIGHTS
@@ -437,7 +437,7 @@ BEGIN @22 // Sending The Solamnic Knights Home
 DESIGNATED 18
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/solamnic.tph~
+INCLUDE ~d0questpack/tp2/quest/solamnic.tph~
 
 //////////////////////////////////////////////////////////////////////
 // NAZARIEL
@@ -447,13 +447,13 @@ BEGIN @23 // Nazariel The Lich
 DESIGNATED 19
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/nazariel.tph~
+INCLUDE ~d0questpack/tp2/quest/nazariel.tph~
 
-COPY ~questpack/lich/areas~ ~override~
+COPY ~d0questpack/lich/areas~ ~override~
 
 LAF questpack_tilesets
   STR_VAR
-    tiz_path = ~questpack/lich/tiz~
+    tiz_path = ~d0questpack/lich/tiz~
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -464,7 +464,7 @@ BEGIN @33 // Reward Negotiation
 DESIGNATED 20
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/negotiate.tph~
+INCLUDE ~d0questpack/tp2/quest/negotiate.tph~
 
 //////////////////////////////////////////////////////////////////////
 // WILBUR
@@ -474,7 +474,7 @@ BEGIN @30 // Infernal Thievery
 DESIGNATED 21
 REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @100
 
-INCLUDE ~questpack/tp2/quest/wilbur.tph~
+INCLUDE ~d0questpack/tp2/quest/wilbur.tph~
 
 //////////////////////////////////////////////////////////////////////
 // ORMAND
@@ -485,13 +485,13 @@ BEGIN @31 // Elven Court
 DESIGNATED 22
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/ormand.tph~
+INCLUDE ~d0questpack/tp2/quest/ormand.tph~
 
-COPY ~questpack/ormand/randenc/areas~ ~override~
+COPY ~d0questpack/ormand/randenc/areas~ ~override~
 
 LAF questpack_tilesets
   STR_VAR
-    tiz_path = ~questpack/ormand/randenc/tiz~
+    tiz_path = ~d0questpack/ormand/randenc/tiz~
 END
 */
 
@@ -505,15 +505,15 @@ DESIGNATED 23
 REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @100
 SUBCOMPONENT @16 // Blood War On Carceri
 
-INCLUDE ~questpack/tp2/quest/carceri_quest.tph~
-INCLUDE ~questpack/tp2/quest/carceri_revisions.tph~
+INCLUDE ~d0questpack/tp2/quest/carceri_quest.tph~
+INCLUDE ~d0questpack/tp2/quest/carceri_revisions.tph~
 
 BEGIN @37 // Quest Content Only
 DESIGNATED 24
 REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @100
 SUBCOMPONENT @16 // Blood War On Carceri
 
-INCLUDE ~questpack/tp2/quest/carceri_quest.tph~
+INCLUDE ~d0questpack/tp2/quest/carceri_quest.tph~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -525,7 +525,7 @@ BEGIN @15 // Enhanced Council Building
 DESIGNATED 25
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/council.tph~
+INCLUDE ~d0questpack/tp2/quest/council.tph~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -537,7 +537,7 @@ BEGIN @9 // Expanded Druid Stronghold
 DESIGNATED 26
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/faldorn.tph~
+INCLUDE ~d0questpack/tp2/quest/faldorn.tph~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -549,7 +549,7 @@ BEGIN @24 // Quallo's Friendship
 DESIGNATED 27
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/quallo.tph~
+INCLUDE ~d0questpack/tp2/quest/quallo.tph~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -561,7 +561,7 @@ BEGIN @25 // Word And Wisdom
 DESIGNATED 28
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-INCLUDE ~questpack/tp2/quest/oghma.tph~
+INCLUDE ~d0questpack/tp2/quest/oghma.tph~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -573,7 +573,7 @@ BEGIN @26 // Underdark Shortcut
 DESIGNATED 29
 REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @98
 
-COMPILE EVALUATE_BUFFER ~questpack/underdark/dialog.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/underdark/dialog.d~
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -589,6 +589,6 @@ COMPILE EVALUATE_BUFFER ~smugglers/dialog.d~
 
 LAF questpack_audio
   STR_VAR
-    audio_path = ~questpack/smugglers/audio~
+    audio_path = ~d0questpack/smugglers/audio~
 END
 */

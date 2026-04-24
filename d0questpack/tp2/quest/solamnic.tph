@@ -1,4 +1,4 @@
-COMPILE EVALUATE_BUFFER ~questpack/solamnic/dialog.d~ USING
+COMPILE EVALUATE_BUFFER ~d0questpack/solamnic/dialog.d~ USING
         ~%tra_path%/english/solamnic.tra~
         ~%tra_path%/%LANGUAGE%/solamnic.tra~
 

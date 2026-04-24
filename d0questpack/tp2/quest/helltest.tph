@@ -1,4 +1,4 @@
-COPY ~questpack/helltest/data/copy~ ~override~
+COPY ~d0questpack/helltest/data/copy~ ~override~
 
 // Construct new silver dragon creature (Nythrun)
 COPY_EXISTING ~hdragsil.cre~ ~override~
@@ -24,13 +24,13 @@ COPY_EXISTING ~hdragsil.cre~ ~override~
   END
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~questpack/helltest/data/teardoor.baf~
-        ~questpack/helltest/data/hellself.baf~
-        ~questpack/helltest/data/ar2904.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/helltest/data/teardoor.baf~
+        ~d0questpack/helltest/data/hellself.baf~
+        ~d0questpack/helltest/data/ar2904.baf~
 
-EXTEND_BOTTOM ~ar2900.bcs~ ~questpack/helltest/data/ar2900.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ar2900.bcs~ ~d0questpack/helltest/data/ar2900.baf~ EVALUATE_BUFFER
 
-EXTEND_TOP ~tearfear.bcs~ ~questpack/helltest/data/tearfear.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~tearfear.bcs~ ~d0questpack/helltest/data/tearfear.baf~ EVALUATE_BUFFER
 
 COPY_EXISTING ~ar2905.bcs~ ~override~
   DECOMPILE_AND_PATCH BEGIN
@@ -42,18 +42,18 @@ COPY_EXISTING ~ar2905.bcs~ ~override~
   END
 BUT_ONLY
 
-EXTEND_TOP ~ar2905.bcs~ ~questpack/helltest/data/ar2905.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar2905.bcs~ ~d0questpack/helltest/data/ar2905.baf~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~questpack/helltest/data/draghell.baf~
+COMPILE EVALUATE_BUFFER ~d0questpack/helltest/data/draghell.baf~
 
 ACTION_IF GAME_IS ~tob bgt bg2ee eet~ BEGIN
-  EXTEND_TOP ~ar4500.bcs~ ~questpack/helltest/data/ar4500.baf~ EVALUATE_BUFFER
+  EXTEND_TOP ~ar4500.bcs~ ~d0questpack/helltest/data/ar4500.baf~ EVALUATE_BUFFER
 END
 
-COMPILE EVALUATE_BUFFER ~questpack/helltest/fear.d~
-        ~questpack/helltest/pride.d~
-        ~questpack/helltest/greed.d~
-        ~questpack/helltest/selfish.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/helltest/fear.d~
+        ~d0questpack/helltest/pride.d~
+        ~d0questpack/helltest/greed.d~
+        ~d0questpack/helltest/selfish.d~
 USING   ~%tra_path%/english/helltest.tra~
         ~%tra_path%/%LANGUAGE%/helltest.tra~
 

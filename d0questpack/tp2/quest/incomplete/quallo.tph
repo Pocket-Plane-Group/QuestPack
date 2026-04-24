@@ -6,31 +6,31 @@ COPY_EXISTING ~sewcc.cre~ ~override/sewcc.cre~
   WRITE_BYTE 0x414 01
   WRITE_BYTE 0x430 00
 
-COMPILE EVALUATE_BUFFER ~questpack/quallo/dialog.d~
-COMPILE EVALUATE_BUFFER ~questpack/quallo/Scripts/compile~
+COMPILE EVALUATE_BUFFER ~d0questpack/quallo/dialog.d~
+COMPILE EVALUATE_BUFFER ~d0questpack/quallo/Scripts/compile~
 
-EXTEND_TOP ~ar0404.bcs~ ~questpack/quallo/scripts/adar0404.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ar0404.bcs~ ~d0questpack/quallo/scripts/adar0404.baf~ EVALUATE_BUFFER
 
-COPY ~questpack/quallo/creatures/j#im5hob.cre~ ~override/j#im5hob.cre~
+COPY ~d0questpack/quallo/creatures/j#im5hob.cre~ ~override/j#im5hob.cre~
   SAY NAME1 @226
   SAY NAME2 @226
 
-COPY ~questpack/quallo/creatures/j#im5hb2.cre~ ~override/j#im5hb2.cre~
+COPY ~d0questpack/quallo/creatures/j#im5hb2.cre~ ~override/j#im5hb2.cre~
   SAY NAME1 @225
   SAY NAME2 @225
 
-COPY ~questpack/quallo/creatures/j#im5kob.cre~ ~override/j#im5kob.cre~
+COPY ~d0questpack/quallo/creatures/j#im5kob.cre~ ~override/j#im5kob.cre~
   SAY NAME1 @224
   SAY NAME2 @224
 
-COPY ~questpack/quallo/creatures/j#im5wom.cre~ ~override/j#im5wom.cre~
+COPY ~d0questpack/quallo/creatures/j#im5wom.cre~ ~override/j#im5wom.cre~
   SAY NAME1 @223
   SAY NAME2 @223
 
-COPY ~questpack/quallo/creatures/j#im5wog.cre~ ~override/j#im5wog.cre~
+COPY ~d0questpack/quallo/creatures/j#im5wog.cre~ ~override/j#im5wog.cre~
   SAY NAME1 #4419
   SAY NAME2 #4419
 
-COPY ~questpack/quallo/epilogue/j#im5.2da~ ~override/j#im5.2da~
+COPY ~d0questpack/quallo/epilogue/j#im5.2da~ ~override/j#im5.2da~
   REPLACE 99998 @222
   REPLACE 99999 @221

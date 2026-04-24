@@ -1,5 +1,5 @@
-COMPILE EVALUATE_BUFFER // ~questpack/negotiate/dialog.d~
-        ~questpack/negotiate/dialog2.d~ USING
+COMPILE EVALUATE_BUFFER // ~d0questpack/negotiate/dialog.d~
+        ~d0questpack/negotiate/dialog2.d~ USING
         ~%tra_path%/english/negotiate.tra~
         ~%tra_path%/%LANGUAGE%/negotiate.tra~
 
@@ -14,4 +14,4 @@ COPY_EXISTING ~ar2100.bcs~ ~override~
   END
 BUT_ONLY
 
-COPY ~questpack/negotiate/spin671.spl~ ~override~
+COPY ~d0questpack/negotiate/spin671.spl~ ~override~
