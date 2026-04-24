@@ -74,11 +74,16 @@ COPY_EXISTING ~FIRMAG01.cre~ ~override~
   ADD_CRE_ITEM ~potn38~ #1 #0 #0 ~NONE~ ~QITEM1 QITEM2 QITEM3 INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
 
 // Blindness protects from gaze attacks... (Guess what, I stole the code from Cam! Ha ha ha!) And then Wisp came along and wrote brand new old code
-COPY_EXISTING ~spwi106.spl~ ~override~
-              ~spwi815.spl~ ~override~
-              ~spwi958.spl~ ~override~
-              ~spwm178.spl~ ~override~
-              ~spin929.spl~ ~override~
+
+ACTION_FOR_EACH spl IN
+
+~spwi106~ ~spwi815~ ~spwi958~ ~spwm178~ ~spin929~ // ~spin329~ To add ?
+
+BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%spl%.spl~ BEGIN
+
+COPY_EXISTING ~%spl%.spl~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
     READ_LONG  0x64 "abil_off"
     READ_SHORT 0x68 "abil_num"
@@ -126,6 +131,10 @@ COPY_EXISTING ~spwi106.spl~ ~override~
     END
   END
 BUT_ONLY
+
+
+	END
+END
 
 COMPILE EVALUATE_BUFFER ~d0questpack/potion/potiontra.d~ USING
         ~%tra_path%/english/potion.tra~
