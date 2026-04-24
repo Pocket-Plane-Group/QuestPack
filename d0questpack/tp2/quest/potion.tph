@@ -78,54 +78,13 @@ COPY_EXISTING ~spwi106.spl~ ~override~
               ~spwi815.spl~ ~override~
               ~spwi958.spl~ ~override~
               ~spwm178.spl~ ~override~
+              ~spin329.spl~ ~override~
               ~spin929.spl~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
-    READ_LONG  0x64 "abil_off"
-    READ_SHORT 0x68 "abil_num"
-    READ_LONG  0x6a "fx_off"
-    SET "delta" = 0
-    FOR (index = 0; index < abil_num; index = index + 1) BEGIN
-      READ_SHORT ("%abil_off%" + 0x1e + (0x28 * "%index%")) "abil_fx_num"
-      READ_SHORT ("%abil_off%" + 0x20 + (0x28 * "%index%")) "abil_fx_idx"
-      SET "abil_fx_idx" = ("%abil_fx_idx%" + "%delta%")
-      WRITE_SHORT ("%abil_off%" + 0x20 + (0x28 * "%index%")) "%abil_fx_idx%"
-      FOR (index2 = 0; index2 < abil_fx_num; index2 = index2 + 1) BEGIN
-        READ_SHORT   ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
-        READ_LONG    ("%fx_off%" + 0x0e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
-        PATCH_IF ("%opcode%" = 74) BEGIN // blindness
-          READ_ASCII ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "clone" (0x30)
-          SET "index2" = "%abil_fx_num%" // kills loop
-        END
-      END
-      PATCH_FOR_EACH resource IN
-                     INSANITY
-                     BEGUILE
-                     D0QPMGAZ
-                     SPIN784
-                     SPIN996
-                     SPIN839
-                     SPIN883
-      BEGIN
-        INSERT_BYTES   ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 0x30      // insert bytes for new effect
-          WRITE_ASCIIE ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) "%clone%" // clones blindness effect
-          WRITE_SHORT  ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 206       // protection from spell
-          WRITE_LONG   ("%fx_off%" + 0x04 + (0x30 * "%abil_fx_idx%")) 0         // unknown
-          WRITE_LONG   ("%fx_off%" + 0x08 + (0x30 * "%abil_fx_idx%")) 0         // unknown
-          WRITE_ASCIIE ("%fx_off%" + 0x14 + (0x30 * "%abil_fx_idx%")) "%resource%" #8 // gaze attack SPL
-        SET "delta" = ("%delta%" + 1)
-        SET "abil_fx_num" = ("%abil_fx_num%" + 1)
-      END
-      INSERT_BYTES   ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 0x30      // insert bytes for new effect
-        WRITE_ASCIIE ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) "%clone%" // clones blindness effect
-        WRITE_SHORT  ("%fx_off%" +        (0x30 * "%abil_fx_idx%")) 83        // immunity to projectile
-        WRITE_LONG   ("%fx_off%" + 0x04 + (0x30 * "%abil_fx_idx%")) 0
-        WRITE_LONG   ("%fx_off%" + 0x08 + (0x30 * "%abil_fx_idx%")) 64        // gaze
-      SET "delta" = ("%delta%" + 1)
-      SET "abil_fx_num" = ("%abil_fx_num%" + 1)
-      WRITE_SHORT ("%abil_off%" + 0x1e + (0x28 * "%index%")) "%abil_fx_num%"
-    END
-  END
-BUT_ONLY
+  PATCH_FOR_EACH gaze IN INSANITY BEGUILE D0QPMGAZ SPIN784 SPIN996 SPIN839 SPIN883 BEGIN // block individual gaze spells
+    LPF CLONE_EFFECT INT_VAR match_opcode = 74 opcode = 206 parameter1 = 0 parameter2 = 0 STR_VAR resource = EVAL ~%gaze%~ END 
+  END   
+  LPF CLONE_EFFECT INT_VAR match_opcode = 74 opcode = 83 parameter1 = 0 parameter2 = 64 END // block gaze projectile, too
+  BUT_ONLY IF_EXISTS
 
 COMPILE EVALUATE_BUFFER ~d0questpack/potion/potiontra.d~ USING
         ~%tra_path%/english/potion.tra~
