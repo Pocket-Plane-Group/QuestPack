@@ -230,14 +230,14 @@ SAY @91
 IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
-EXTEND_BOTTOM SHOP01 0 #1
+EXTEND_BOTTOM SHOP01 0
 IF ~GlobalLT("D0MiraToldBaisera","GLOBAL",3)
 OR(2)
 Global("FindBaisera","GLOBAL",1)
 Global("D0BesamenStory","GLOBAL",1)~ THEN REPLY @92 GOTO MiraBaisera
 END
 
-EXTEND_BOTTOM SHOP01 10 #1
+EXTEND_BOTTOM SHOP01 10
 IF ~GlobalLT("D0MiraToldBaisera","GLOBAL",3)
 OR(2)
 Global("FindBaisera","GLOBAL",1)

@@ -498,11 +498,11 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP HABREGA 0 #1
+EXTEND_BOTTOM HABREGA 0
   IF ~Global("D0Reynald","GLOBAL",3)~ THEN REPLY @82 DO ~SetGlobal("D0SpokenBregaGuard","MYAREA",1)~ GOTO BR_1
 END
 
-EXTEND_TOP HABREGA 1
+EXTEND_BOTTOM HABREGA 1
   IF ~Global("D0Reynald","GLOBAL",3)~ THEN REPLY @82 DO ~SetGlobal("D0SpokenBregaGuard","MYAREA",1)~ GOTO BR_1
 END
 
@@ -527,14 +527,14 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP BYLANNA 5 #1
+EXTEND_BOTTOM BYLANNA 5
   IF ~Global("D0Reynald","GLOBAL",3)
 !Global("D0SpokenBregaGuard","MYAREA",1)~ THEN REPLY @82 GOTO BY_1
   IF ~Global("D0Reynald","GLOBAL",3)
 Global("D0SpokenBregaGuard","MYAREA",1)~ THEN REPLY @89 GOTO BY_1a
 END
 
-EXTEND_TOP BYLANNA 6
+EXTEND_BOTTOM BYLANNA 6
   IF ~Global("D0Reynald","GLOBAL",3)
 !Global("D0SpokenBregaGuard","MYAREA",1)~ THEN REPLY @82 GOTO BY_1
   IF ~Global("D0Reynald","GLOBAL",3)

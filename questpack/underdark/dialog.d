@@ -20,7 +20,7 @@ IF ~~ THEN EXTERN UDDROW10 21
 END
 END
 
-EXTEND_BOTTOM UDDROW10 3 #1
+EXTEND_BOTTOM UDDROW10 3
 IF ~Global("D0SpokenMatronEggs","LOCALS",1)~ THEN REPLY ~I have reason to believe that the Matron Mothers are holding Adalon's eggs. Where could they be hiding them?~ GOTO ShortcutGuy1
 END
 

@@ -1,3 +1,4 @@
+/*
 REPLACE BRUS2
 
 IF WEIGHT #1 ~True()~ THEN BEGIN 0
@@ -21,6 +22,17 @@ IF ~~ THEN BEGIN BR_1
   IF ~Class(Player1,DRUID_ALL)~ THEN DO ~SetGlobal("D0BrusLender","GLOBAL",1)~ GOTO 12
 END
 
+END
+*/
+
+ADD_TRANS_ACTION BRUS2 BEGIN 0 END BEGIN 1 2 3 4 5 6 7 8 END ~SetGlobal("D0BrusLender","GLOBAL",1)~
+
+INTERJECT_COPY_TRANS BRUS2 2 D0BRUS2
+== BRUS2 @1
+END
+
+INTERJECT_COPY_TRANS BRUS2 3 D0BRUS2
+== BRUS2 @1
 END
 
 //////////////////////////////////////////////////////////////////////
@@ -1898,7 +1910,7 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP SURLY 14
+EXTEND_BOTTOM SURLY 14
 IF ~False() !NumTimesTalkedTo(0)
 Dead("Lehtinan")~ THEN REPLY @335 GOTO SU_1
 END

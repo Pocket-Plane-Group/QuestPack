@@ -360,19 +360,19 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP RYLOCK 2 #1
+EXTEND_BOTTOM RYLOCK 2
   IF ~~ THEN REPLY @43 GOTO RY_1
 END
 
-EXTEND_TOP RYLOCK 5 #2
+EXTEND_BOTTOM RYLOCK 5
   IF ~~ THEN REPLY @44 GOTO RY_1
 END
 
-EXTEND_TOP RYLOCK 8 #2
+EXTEND_BOTTOM RYLOCK 8
   IF ~~ THEN REPLY @45 GOTO RY_1
 END
 
-EXTEND_TOP RYLOCK 9 #2
+EXTEND_BOTTOM RYLOCK 9
   IF ~!IsValidForPartyDialog("Jaheira")~ THEN REPLY @46 GOTO RY_2
 END
 
@@ -433,7 +433,7 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP BERINVAR 0 #4
+EXTEND_BOTTOM BERINVAR 0
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -443,7 +443,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO BE_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO BE_2
 END
 
-EXTEND_TOP BERINVAR 1 #3
+EXTEND_BOTTOM BERINVAR 1
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -453,7 +453,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO BE_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO BE_2
 END
 
-EXTEND_TOP BERINVAR 2 #4
+EXTEND_BOTTOM BERINVAR 2
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -463,7 +463,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 UNSOLVED_JOURNA
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 UNSOLVED_JOURNAL #47866 GOTO BE_2
 END
 
-EXTEND_TOP BERINVAR 5 #3
+EXTEND_BOTTOM BERINVAR 5
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -473,7 +473,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO BE_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO BE_2
 END
 
-EXTEND_TOP BERINVAR 8 #3
+EXTEND_BOTTOM BERINVAR 8
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -513,7 +513,7 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP PACE 0 #4
+EXTEND_BOTTOM PACE 0
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -523,7 +523,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO PA_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO PA_2
 END
 
-EXTEND_TOP PACE 1 #4
+EXTEND_BOTTOM PACE 1
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -533,7 +533,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO PA_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO PA_2
 END
 
-EXTEND_TOP PACE 2 #4
+EXTEND_BOTTOM PACE 2
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -543,7 +543,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO PA_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO PA_2
 END
 
-EXTEND_TOP PACE 14 #3
+EXTEND_BOTTOM PACE 14
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -553,7 +553,7 @@ Global("D0WarnedHarpersButNotBetray","GLOBAL",0)~ THEN REPLY @64 GOTO PA_1
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO PA_2
 END
 
-EXTEND_TOP PACE 15 #3
+EXTEND_BOTTOM PACE 15
   IF ~Global("D0Harpers","GLOBAL",0)
 !PartyHasItem("misc5u")
 !PartyHasItem("d0misc5u")
@@ -586,7 +586,7 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP MERONIA 0 #5
+EXTEND_BOTTOM MERONIA 0
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -609,7 +609,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 3 #4
+EXTEND_BOTTOM MERONIA 3
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -632,7 +632,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 5 #5
+EXTEND_BOTTOM MERONIA 5
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -655,7 +655,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 7 #4
+EXTEND_BOTTOM MERONIA 7
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -678,7 +678,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 8 #4
+EXTEND_BOTTOM MERONIA 8
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -701,7 +701,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 9 #5
+EXTEND_BOTTOM MERONIA 9
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -724,7 +724,7 @@ Dead("Lyros")~ THEN REPLY @74 UNSOLVED_JOURNAL #47866 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 UNSOLVED_JOURNAL #47866 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 10 #4
+EXTEND_BOTTOM MERONIA 10
   IF ~OR(4)
 Dead("Jaheira")
 !InParty("Jaheira")
@@ -772,7 +772,7 @@ Global("D0Harpers","GLOBAL",6)
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 15 #4
+EXTEND_BOTTOM MERONIA 15
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")
@@ -795,7 +795,7 @@ Dead("Lyros")~ THEN REPLY @74 GOTO ME_9
 !PartyHasItem("d0misc5u")~ THEN REPLY @65 GOTO ME_10
 END
 
-EXTEND_TOP MERONIA 19 #4
+EXTEND_BOTTOM MERONIA 19
   IF ~Global("D0Harpers","GLOBAL",0)
 Global("D0GotMontaron","GLOBAL",0)
 !PartyHasItem("misc5u")

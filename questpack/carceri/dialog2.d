@@ -26,7 +26,7 @@ IF ~~ THEN DO ~SetGlobal("D0Succubus","GLOBAL",2)
 Kill(Myself)~ EXIT
 END
 
-EXTEND_TOP MADAM 12 7 3 0
+EXTEND_BOTTOM MADAM 12 7 3 0
 IF ~Global("D0Succubus","GLOBAL",2)~ THEN REPLY ~Actually, I was looking into the fate of one of your customers, who died shortly after an experience with a companion.~ GOTO WhatTheFuck
 END
 

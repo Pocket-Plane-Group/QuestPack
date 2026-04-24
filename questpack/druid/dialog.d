@@ -37,7 +37,7 @@ END
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP CEFALDOR 6
+EXTEND_BOTTOM CEFALDOR 6
 IF ~~ THEN REPLY ~Faldorn?! I thought you were dead!~ GOTO FA_1
 IF ~~ THEN REPLY ~Don't you remember me, Faldorn? It's <CHARNAME>.~ GOTO FA_2
 END
@@ -49,7 +49,7 @@ CheckStatGT(Player1,13,WIS)
 Class(Player1,DRUID_ALL)~ THEN REPLY ~Stop the righteous force of nature? By no means! I come to offer assistance in the destruction the Shadow Druids leave in their wake.~ GOTO FA_4
 END
 
-EXTEND_TOP CEFALDOR 2
+EXTEND_BOTTOM CEFALDOR 2
 IF ~~ THEN REPLY ~Don't you remember me, Faldorn? It's <CHARNAME>.~ GOTO FA_2a
 END
 

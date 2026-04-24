@@ -158,7 +158,7 @@ AddJournalEntry(@9,QUEST_DONE)~ EXIT
 END
 END
 
-EXTEND_TOP CORNEIL 0 #1
+EXTEND_BOTTOM CORNEIL 0
 IF ~Global("D0CorneilSolamnic","LOCALS",0)
 !Dead("obssol01")
 !Dead("obssol02")
@@ -168,7 +168,7 @@ Global("SolamnicKnights","GLOBAL",1)
 Global("SolamnicKnights","GLOBAL",4)~ THEN REPLY @3 GOTO CO_99
 END
 
-EXTEND_TOP CORNEIL 4 #1
+EXTEND_BOTTOM CORNEIL 4
 IF ~Global("D0CorneilSolamnic","LOCALS",0)
 !Dead("obssol01")
 !Dead("obssol02")

@@ -338,13 +338,13 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP CORNEIL 0 #1
+EXTEND_BOTTOM CORNEIL 0
 IF ~Global("EdwinJob","GLOBAL",1)
 Global("D0Rayic","GLOBAL",0)
 Global("D0ReportEdwin","LOCALS",0)~ THEN REPLY @73 DO ~SetGlobal("D0ReportEdwin","LOCALS",1)~ GOTO CO_1
 END
 
-EXTEND_TOP CORNEIL 4 #1
+EXTEND_BOTTOM CORNEIL 4
 IF ~Global("EdwinJob","GLOBAL",1)
 Global("D0Rayic","GLOBAL",0)
 Global("D0ReportEdwin","LOCALS",0)~ THEN REPLY @73 DO ~SetGlobal("D0ReportEdwin","LOCALS",1)~ GOTO CO_1

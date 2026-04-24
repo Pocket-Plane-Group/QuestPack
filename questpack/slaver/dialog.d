@@ -260,7 +260,7 @@ GlobalLT("KamirWard","GLOBAL",3)
 Global("D0SlaveGirl","GLOBAL",0)~ THEN REPLY @24 GOTO LE_1
 END
 
-EXTEND_BOTTOM LEHTIN 0 #1
+EXTEND_BOTTOM LEHTIN 0
 IF ~GlobalGT("TalkedToArenthis","GLOBAL",0)
 GlobalLT("KamirWard","GLOBAL",3)
 Global("D0SlaveGirl","GLOBAL",0)
@@ -271,7 +271,7 @@ GlobalGT("KnowSlaves","GLOBAL",0)
 GlobalGT("HendakTold","GLOBAL",0)~ THEN REPLY @24 GOTO LE_1
 END
 
-EXTEND_BOTTOM LEHTIN 14 #1
+EXTEND_BOTTOM LEHTIN 14
 IF ~GlobalGT("TalkedToArenthis","GLOBAL",0)
 GlobalLT("KamirWard","GLOBAL",3)
 Global("D0SlaveGirl","GLOBAL",0)

@@ -1,6 +1,6 @@
 REPLACE_TRIGGER_TEXT DOGHMA ~Global("RevealUmar","GLOBAL",1)~ ~False()~
 
-EXTEND_BOTTOM DOGHMA 0 #1
+EXTEND_BOTTOM DOGHMA 0
   IF ~OR(3)
 PartyHasItem("book94")
 PartyHasItem("book95")
@@ -13,7 +13,7 @@ PartyHasItem("j#kelbdy")
 PartyHasItem("pgnalbdy")~ THEN REPLY #57922 /* ~A friend is afflicted by vampirism.  An old book suggested that followers of Oghma might know something about that.~ */ GOTO 10
 END
 
-EXTEND_BOTTOM DOGHMA 3 #1
+EXTEND_BOTTOM DOGHMA 3
   IF ~OR(3)
 PartyHasItem("book94")
 PartyHasItem("book95")
@@ -26,7 +26,7 @@ PartyHasItem("j#kelbdy")
 PartyHasItem("pgnalbdy")~ THEN REPLY #57922 /* ~A friend is afflicted by vampirism.  An old book suggested that followers of Oghma might know something about that.~ */ GOTO 10
 END
 
-EXTEND_BOTTOM DOGHMA 7 #1
+EXTEND_BOTTOM DOGHMA 7
   IF ~OR(3)
 PartyHasItem("book94")
 PartyHasItem("book95")
@@ -39,7 +39,7 @@ PartyHasItem("j#kelbdy")
 PartyHasItem("pgnalbdy")~ THEN REPLY #57922 /* ~A friend is afflicted by vampirism.  An old book suggested that followers of Oghma might know something about that.~ */ GOTO 10
 END
 
-EXTEND_BOTTOM DOGHMA 9 #1
+EXTEND_BOTTOM DOGHMA 9
   IF ~OR(3)
 PartyHasItem("book94")
 PartyHasItem("book95")

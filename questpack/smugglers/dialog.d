@@ -1,20 +1,20 @@
-EXTEND_TOP CALAHA 1
+EXTEND_BOTTOM CALAHA 1
   IF ~!Global("TalkedToCalahan","GLOBAL",1)~ THEN REPLY ~Smuggling, eh? Tell me more.~ GOTO CA_18
   IF ~Global("TalkedToCalahan","GLOBAL",1)
 GlobalGT("AsylumPlot","GLOBAL",39)~ THEN REPLY ~I was wondering...can you smuggle people into Athkatla?~ GOTO CA_19
 END
 
-EXTEND_TOP CALAHA 6
+EXTEND_BOTTOM CALAHA 6
   IF ~!Global("TalkedToCalahan","GLOBAL",1)~ THEN REPLY ~Smuggling, eh? Tell me more.~ GOTO CA_18
   IF ~Global("TalkedToCalahan","GLOBAL",1)
 GlobalGT("AsylumPlot","GLOBAL",39)~ THEN REPLY ~I was wondering...can you smuggle people into Athkatla?~ GOTO CA_19
 END
 
-EXTEND_TOP CALAHA 10
+EXTEND_BOTTOM CALAHA 10
   IF ~GlobalGT("AsylumPlot","GLOBAL",39)~ THEN REPLY ~I was wondering...can you smuggle people into Athkatla?~ GOTO CA_19
 END
 
-EXTEND_TOP CALAHA 14
+EXTEND_BOTTOM CALAHA 14
   IF ~!Global("TalkedToCalahan","GLOBAL",1)~ THEN REPLY ~Smuggling, eh? Tell me more.~ GOTO CA_18
   IF ~Global("TalkedToCalahan","GLOBAL",1)
 GlobalGT("AsylumPlot","GLOBAL",39)~ THEN REPLY ~I was wondering...can you smuggle people into Athkatla?~ GOTO CA_19

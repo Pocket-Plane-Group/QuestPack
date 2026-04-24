@@ -61,12 +61,12 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP HABREGA 0
+EXTEND_BOTTOM HABREGA 0
 IF ~Global("D0WaitingAssault","LOCALS",1)~ THEN REPLY @388 DO ~EraseJournalEntry(@516)
 SetGlobal("D0WaitingAssault","LOCALS",2)~ GOTO BR_6
 END
 
-EXTEND_TOP HABREGA 1
+EXTEND_BOTTOM HABREGA 1
 IF ~Global("D0WaitingAssault","LOCALS",1)~ THEN REPLY @388 DO ~EraseJournalEntry(@516)
 SetGlobal("D0WaitingAssault","LOCALS",2)~ GOTO BR_6
 END
@@ -491,12 +491,12 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP BYLANNA 5 #1
+EXTEND_BOTTOM BYLANNA 5
   IF ~Global("D0Maevar2","GLOBAL",34)
 Global("D0AttackThieves","GLOBAL",0)~ THEN REPLY @455 GOTO BY_1
 END
 
-EXTEND_TOP BYLANNA 6
+EXTEND_BOTTOM BYLANNA 6
   IF ~Global("D0Maevar2","GLOBAL",34)
 Global("D0AttackThieves","GLOBAL",0)~ THEN REPLY @455 GOTO BY_1
 END

@@ -756,25 +756,25 @@ END
 END
 
 
-EXTEND_TOP ROGER 0
+EXTEND_BOTTOM ROGER 0
 IF ~!Global("PotionRoger","GLOBAL",0)
 !Dead("d0qppotn")
 InMyArea("d0qppotn")~ THEN REPLY @243 EXTERN ROGER PQ_Potion
 END
 
-EXTEND_TOP ROGER 21
+EXTEND_BOTTOM ROGER 21
 IF ~!Global("PotionRoger","GLOBAL",0)
 !Dead("d0qppotn")
 InMyArea("d0qppotn")~ THEN REPLY @243 EXTERN ROGER PQ_Potion
 END
 
-EXTEND_TOP ROGER 24
+EXTEND_BOTTOM ROGER 24
 IF ~!Global("PotionRoger","GLOBAL",0)
 !Dead("d0qppotn")
 InMyArea("d0qppotn")~ THEN REPLY @243 EXTERN ROGER PQ_Potion
 END
 
-EXTEND_TOP ROGER 27
+EXTEND_BOTTOM ROGER 27
 IF ~!Global("PotionRoger","GLOBAL",0)
 !Dead("d0qppotn")
 InMyArea("d0qppotn")~ THEN REPLY @243 EXTERN ROGER PQ_Potion
@@ -802,7 +802,7 @@ END
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-EXTEND_TOP UHINN01 2 #1
+EXTEND_BOTTOM UHINN01 2
 IF ~Global("D0JadOrigin","GLOBAL",1)~ THEN REPLY @248 DO ~SetGlobal("D0JadOrigin","GLOBAL",2)~ GOTO IN_1
 END
 

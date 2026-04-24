@@ -12,7 +12,7 @@ SAY ~Do not change the subject. I have no interest in feeding your petty greed. 
 END
 END
 
-EXTEND_TOP FIRKRA02 8 26
+EXTEND_BOTTOM FIRKRA02 8 26
 IF ~Global("D0FirkraagTrade","LOCALS",0)~ THEN REPLY ~Wait! Surely such a mighty creature as yourself has an impressive hoard. Perhaps we could perform an exchange; I may have items of interest to you.~ GOTO FirkraagTrade
 END
 
