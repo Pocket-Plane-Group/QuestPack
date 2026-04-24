@@ -23,4 +23,7 @@ COPY ~questpack/oasis/combat/spells/d0bastio.spl~ ~override~
 COPY ~questpack/oasis/combat/spells/d0bash.spl~ ~override~
   SAY 0x8 @201
 
-COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts~
+COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amthea.baf~
+COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amtmag.baf~
+COMPILE EVALUATE_BUFFER ~questpack/oasis/combat/scripts/d0amtmer.baf~
+EXTEND_TOP ~ar6300.bcs~ ~questpack/oasis/combat/scripts/ar6300.baf~ EVALUATE_BUFFER
