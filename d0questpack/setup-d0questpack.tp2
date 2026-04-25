@@ -123,6 +123,8 @@ ALWAYS
 
     // We only perform this patch once per install.
     ACTION_IF !FILE_EXISTS_IN_GAME fl#qp_standardpatch.mrk BEGIN
+      INCLUDE ~d0questpack/tp2/kit_ids_fixer.tpa~
+      INCLUDE ~d0questpack/tp2/tob2soa.tph~
       INCLUDE ~d0questpack/tp2/standardpatch.tph~
       COPY_EXISTING sw1h01.itm "override/fl#qp_standardpatch.mrk"
     END
