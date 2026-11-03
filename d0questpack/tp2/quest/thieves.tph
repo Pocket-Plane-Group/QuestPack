@@ -7,19 +7,19 @@ COMPILE EVALUATE_BUFFER ~d0questpack/thieves/dialog0.d~ // Rayic
 
 ADD_JOURNAL @75 @121 @224 USING
             ~%tra_path%/english/thieves.tra~
-            ~%tra_path%%LANGUAGE%/thieves.tra~
+            ~%tra_path%/%LANGUAGE%/thieves.tra~
 
 ADD_JOURNAL TITLE (@583) @357 @358 @359 @363 @364 @365 @366 @367 @368 @369 @370 @371 @372 @373 @374 @375 USING
             ~%tra_path%/english/thieves.tra~
-            ~%tra_path%%LANGUAGE%/thieves.tra~
+            ~%tra_path%/%LANGUAGE%/thieves.tra~
 
 ADD_JOURNAL TITLE (@584) @360 @361 @362 @515 @516 @517 USING
             ~%tra_path%/english/thieves.tra~
-            ~%tra_path%%LANGUAGE%/thieves.tra~
+            ~%tra_path%/%LANGUAGE%/thieves.tra~
 
 ADD_JOURNAL TITLE (@585) @574 @575 USING
             ~%tra_path%/english/thieves.tra~
-            ~%tra_path%%LANGUAGE%/thieves.tra~
+            ~%tra_path%/%LANGUAGE%/thieves.tra~
 
 // REFERENCES TO NIGHT KNIVES
 STRING_SET 6320 @192
